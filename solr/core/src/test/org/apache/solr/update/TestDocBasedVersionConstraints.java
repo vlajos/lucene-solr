@@ -47,7 +47,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
 
   public void testSimpleUpdates() throws Exception {
 
-    // skip low version against commited data
+    // skip low version against committed data
     assertU(adoc("id", "aaa", "name", "a1", "my_version_l", "1001"));
     assertU(commit());
     assertU(adoc("id", "aaa", "name", "a2", "my_version_l", "1002"));
@@ -62,7 +62,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
              , "=={'doc':{'name':'a2'}}");
 
-    // skip low version against uncommited data from updateLog
+    // skip low version against uncommitted data from updateLog
     assertU(adoc("id", "aaa", "name", "a3", "my_version_l", "1003"));
     assertU(adoc("id", "aaa", "name", "XX", "my_version_l",    "7"));
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
@@ -98,7 +98,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
 
   public void testSimpleDeletes() throws Exception {
 
-    // skip low version delete against commited doc
+    // skip low version delete against committed doc
     assertU(adoc("id", "aaa", "name", "a1", "my_version_l", "1001"));
     assertU(commit());
     assertU(adoc("id", "aaa", "name", "a2", "my_version_l", "1002"));
@@ -113,7 +113,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
              , "=={'doc':{'name':'a2'}}");
 
-    // skip low version delete against uncommited doc from updateLog
+    // skip low version delete against uncommitted doc from updateLog
     assertU(adoc("id", "aaa", "name", "a3", "my_version_l", "1003"));
     deleteAndGetVersion("aaa",
                         params("del_version", "8"));
@@ -125,7 +125,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
              , "=={'doc':{'name':'a3'}}");
 
-    // skip low version add against uncommited "delete" from updateLog
+    // skip low version add against uncommitted "delete" from updateLog
     deleteAndGetVersion("aaa", params("del_version", "1010"));
     assertU(adoc("id", "aaa", "name", "XX", "my_version_l", "22"));
     assertJQ(req("qt","/get", "id","aaa", "fl","my_version_l")
@@ -154,7 +154,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
    */
   public void testFloatVersionField() throws Exception {
 
-    // skip low version add & low version delete against commited doc
+    // skip low version add & low version delete against committed doc
     updateJ(jsonAdd(sdoc("id", "aaa", "name", "a1", "my_version_f", "10.01")),
             params("update.chain","external-version-float"));
     assertU(commit());
@@ -169,7 +169,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
              , "=={'doc':{'name':'a1'}}");
     assertU(commit());
     
-    // skip low version delete against uncommited doc from updateLog
+    // skip low version delete against uncommitted doc from updateLog
     updateJ(jsonAdd(sdoc("id", "aaa", "name", "a2", "my_version_f", "10.02")), 
             params("update.chain","external-version-float"));
     deleteAndGetVersion("aaa", params("del_version", "8", 
@@ -182,7 +182,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
              , "=={'doc':{'name':'a2'}}");
 
-    // skip low version add against uncommited "delete" from updateLog
+    // skip low version add against uncommitted "delete" from updateLog
     deleteAndGetVersion("aaa", params("del_version", "10.10",
                                       "update.chain","external-version-float"));
     updateJ(jsonAdd(sdoc("id", "aaa", "name", "XX", "my_version_f", "10.05")),
@@ -210,7 +210,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
 
   public void testFailOnOldVersion() throws Exception {
 
-    // fail low version add & low version delete against commited doc
+    // fail low version add & low version delete against committed doc
     updateJ(jsonAdd(sdoc("id", "aaa", "name", "a1", "my_version_l", "1001")),
             params("update.chain","external-version-failhard"));
     assertU(commit());
@@ -235,7 +235,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
              , "=={'doc':{'name':'a1'}}");
     assertU(commit());
     
-    // fail low version delete against uncommited doc from updateLog
+    // fail low version delete against uncommitted doc from updateLog
     updateJ(jsonAdd(sdoc("id", "aaa", "name", "a2", "my_version_l", "1002")), 
             params("update.chain","external-version-failhard"));
     try {
@@ -253,7 +253,7 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
     assertJQ(req("qt","/get", "id","aaa", "fl","name")
              , "=={'doc':{'name':'a2'}}");
 
-    // fail low version add against uncommited "delete" from updateLog
+    // fail low version add against uncommitted "delete" from updateLog
     deleteAndGetVersion("aaa", params("del_version", "1010",
                                       "update.chain","external-version-failhard"));
     try {
@@ -359,12 +359,12 @@ public class TestDocBasedVersionConstraints extends SolrTestCaseJ4 {
    */
   public void testConcurrentAdds() throws Exception {
     final int NUM_DOCS = atLeast(50);
-    final int MAX_CONCURENT = atLeast(10);
-    ExecutorService runner = ExecutorUtil.newMDCAwareFixedThreadPool(MAX_CONCURENT, new DefaultSolrThreadFactory("TestDocBasedVersionConstraints"));
+    final int MAX_CONCURRENT = atLeast(10);
+    ExecutorService runner = ExecutorUtil.newMDCAwareFixedThreadPool(MAX_CONCURRENT, new DefaultSolrThreadFactory("TestDocBasedVersionConstraints"));
     // runner = Executors.newFixedThreadPool(1);    // to test single threaded
     try {
       for (int id = 0; id < NUM_DOCS; id++) {
-        final int numAdds = TestUtil.nextInt(random(), 3, MAX_CONCURENT);
+        final int numAdds = TestUtil.nextInt(random(), 3, MAX_CONCURRENT);
         final int winner = TestUtil.nextInt(random(), 0, numAdds - 1);
         final int winnerVersion = atLeast(100);
         final boolean winnerIsDeleted = (0 == TestUtil.nextInt(random(), 0, 4));

@@ -1936,7 +1936,7 @@ public class IndexWriter implements Closeable, TwoPhaseCommit, Accountable {
     final MergePolicy.MergeSpecification spec;
     if (maxNumSegments != UNBOUNDED_MAX_MERGE_SEGMENTS) {
       assert trigger == MergeTrigger.EXPLICIT || trigger == MergeTrigger.MERGE_FINISHED :
-        "Expected EXPLICT or MERGE_FINISHED as trigger even with maxNumSegments set but was: " + trigger.name();
+        "Expected EXPLICIT or MERGE_FINISHED as trigger even with maxNumSegments set but was: " + trigger.name();
       spec = mergePolicy.findForcedMerges(segmentInfos, maxNumSegments, Collections.unmodifiableMap(segmentsToMerge), this);
       newMergesFound = spec != null;
       if (newMergesFound) {
@@ -3957,7 +3957,7 @@ public class IndexWriter implements Closeable, TwoPhaseCommit, Accountable {
       }
     }
     
-    // If any error occured, throw it.
+    // If any error occurred, throw it.
     if (!suppressExceptions) {
       IOUtils.reThrow(th);
     }

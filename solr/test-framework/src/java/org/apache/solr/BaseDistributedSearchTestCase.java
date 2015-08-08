@@ -493,7 +493,7 @@ public abstract class BaseDistributedSearchTestCase extends SolrTestCaseJ4 {
   
   /**
    * Indexes the document in both the control client and the specified client asserting
-   * that the respones are equivilent
+   * that the respones are equivalent
    */
   protected UpdateResponse indexDoc(SolrClient client, SolrParams params, SolrInputDocument... sdocs) throws IOException, SolrServerException {
     UpdateResponse controlRsp = add(controlClient, params, sdocs);

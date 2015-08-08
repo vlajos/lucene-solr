@@ -73,7 +73,7 @@ public class UpdateRequestProcessorFactoryTest extends AbstractSolrTestCase {
   public void testUpdateDistribChainSkipping() throws Exception {
 
     // a key part of this test is verifying that LogUpdateProcessor is found in all chains because it
-    // is a @RunAllways processor -- but in order for that to work, we have to sanity check that the log
+    // is a @RunAlways processor -- but in order for that to work, we have to sanity check that the log
     // level is at least "INFO" otherwise the factory won't even produce a processor and all our assertions
     // are for nought.  (see LogUpdateProcessorFactory.getInstance)
     //
@@ -129,7 +129,7 @@ public class UpdateRequestProcessorFactoryTest extends AbstractSolrTestCase {
       assertFalse(name + " (distrib) procs is empty", procs.isEmpty());
 
       // for these 3 (distrib) chains, the first proc should always be LogUpdateProcessor
-      assertTrue(name + " (distrib) first proc should be LogUpdateProcessor because of @RunAllways: "
+      assertTrue(name + " (distrib) first proc should be LogUpdateProcessor because of @RunAlways: "
                  + procs.toString(),
                  ( // compare them both just because i'm going insane and the more checks the better
                    proc instanceof LogUpdateProcessor

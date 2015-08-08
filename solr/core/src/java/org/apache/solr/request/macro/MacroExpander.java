@@ -147,7 +147,7 @@ public class MacroExpander {
       // update "start" to be at the end of ${...}
       start = rbrace + 1;
 
-      // String inbetween = val.substring(idx, rbrace);
+      // String between = val.substring(idx, rbrace);
       QueryParsing.StrParser parser = new QueryParsing.StrParser(val, idx, rbrace);
       try {
         String paramName = parser.getId();

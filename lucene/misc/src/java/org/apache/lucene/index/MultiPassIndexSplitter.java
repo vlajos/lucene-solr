@@ -115,7 +115,7 @@ public class MultiPassIndexSplitter {
     if (args.length < 5) {
       System.err.println("Usage: MultiPassIndexSplitter -out <outputDir> -num <numParts> [-seq] <inputIndex1> [<inputIndex2 ...]");
       System.err.println("\tinputIndex\tpath to input index, multiple values are ok");
-      System.err.println("\t-out ouputDir\tpath to output directory to contain partial indexes");
+      System.err.println("\t-out outputDir\tpath to output directory to contain partial indexes");
       System.err.println("\t-num numParts\tnumber of parts to produce");
       System.err.println("\t-seq\tsequential docid-range split (default is round-robin)");
       System.exit(-1);

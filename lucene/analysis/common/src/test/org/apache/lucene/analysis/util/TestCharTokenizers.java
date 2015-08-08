@@ -37,7 +37,7 @@ import org.apache.lucene.util.TestUtil;
 public class TestCharTokenizers extends BaseTokenStreamTestCase {
 
   /*
-   * test to read surrogate pairs without loosing the pairing 
+   * test to read surrogate pairs without losing the pairing 
    * if the surrogate pair is at the border of the internal IO buffer
    */
   public void testReadSupplementaryChars() throws IOException {

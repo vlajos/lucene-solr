@@ -164,7 +164,7 @@ public class SwitchQParserPlugin extends QParserPlugin {
       public Query parse() throws SyntaxError {
         String val = localParams.get(QueryParsing.V);
 
-        // we don't want to wrapDefaults arround params, because then 
+        // we don't want to wrapDefaults around params, because then 
         // clients could add their own switch options 
         String subQ = localParams.get(SWITCH_DEFAULT);
         subQ = StringUtils.isBlank(val)

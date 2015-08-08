@@ -133,7 +133,7 @@ public class TestPositionIncrement extends LuceneTestCase {
     hits = searcher.search(q, 1000).scoreDocs;
     assertEquals(0, hits.length);
 
-    // same as previous, just specify positions explicitely.
+    // same as previous, just specify positions explicitly.
     builder = new PhraseQuery.Builder();
     builder.add(new Term("field", "1"), 0);
     builder.add(new Term("field", "2"), 1);

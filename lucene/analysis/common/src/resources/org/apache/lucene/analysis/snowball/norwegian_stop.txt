@@ -156,8 +156,8 @@ hennes         | hers
 hoss           | how *
 hossen         | how *
 ikkje          | not *
-ingi           | noone *
-inkje          | noone *
+ingi           | no one *
+inkje          | no one *
 korleis        | how *
 korso          | how *
 kva            | what/which *

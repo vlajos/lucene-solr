@@ -56,7 +56,7 @@ public class ConjunctionDISI extends DocIdSetIterator {
     // Check for exactly this class for collapsing. Subclasses can do their own optimizations.
     if (disi.getClass() == ConjunctionDISI.class || disi.getClass() == TwoPhase.class) {
       ConjunctionDISI conjunction = (ConjunctionDISI) disi;
-      // subconjuctions have already split themselves into two phase iterators and others, so we can take those
+      // subconjunctions have already split themselves into two phase iterators and others, so we can take those
       // iterators as they are and move them up to this conjunction
       allIterators.add(conjunction.lead);
       Collections.addAll(allIterators, conjunction.others);

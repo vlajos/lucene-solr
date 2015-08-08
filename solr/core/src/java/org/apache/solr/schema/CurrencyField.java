@@ -85,7 +85,7 @@ public class CurrencyField extends FieldType implements SchemaAware, ResourceLoa
   public static Logger log = LoggerFactory.getLogger(CurrencyField.class);
 
   /**
-   * A wrapper arround <code>Currency.getInstance</code> that returns null
+   * A wrapper around <code>Currency.getInstance</code> that returns null
    * instead of throwing <code>IllegalArgumentException</code>
    * if the specified Currency does not exist in this JVM.
    *
@@ -259,10 +259,10 @@ public class CurrencyField extends FieldType implements SchemaAware, ResourceLoa
    * <p>
    * For example: If the default Currency specified for a field is 
    * <code>USD</code>, then the values returned by this value source would 
-   * represent the equivilent number of "cents" (ie: value in dollars * 100) 
+   * represent the equivalent number of "cents" (ie: value in dollars * 100) 
    * after converting each document's native currency to USD -- because the 
    * default fractional digits for <code>USD</code> is "<code>2</code>".  
-   * So for a document whose indexed value was currently equivilent to 
+   * So for a document whose indexed value was currently equivalent to 
    * "<code>5.43,USD</code>" using the the exchange provider for this field, 
    * this ValueSource would return a value of "<code>543</code>"
    * </p>
@@ -288,9 +288,9 @@ public class CurrencyField extends FieldType implements SchemaAware, ResourceLoa
    * <p>
    * For example: If the <code>targetCurrencyCode</code> param is set to
    * <code>USD</code>, then the values returned by this value source would 
-   * represent the equivilent number of dollars after converting each 
+   * represent the equivalent number of dollars after converting each 
    * document's raw value to <code>USD</code>.  So for a document whose 
-   * indexed value was currently equivilent to "<code>5.43,USD</code>" 
+   * indexed value was currently equivalent to "<code>5.43,USD</code>" 
    * using the the exchange provider for this field, this ValueSource would 
    * return a value of "<code>5.43</code>"
    * </p>

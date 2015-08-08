@@ -524,7 +524,7 @@ public class RangeFacetRequest extends FacetComponent.FacetBase {
 
     /**
      * Adds the String gap param to a low Range endpoint value to determine
-     * the corrisponding high Range endpoint value.
+     * the corresponding high Range endpoint value.
      * Can throw a low level format exception as needed.
      */
     protected abstract T parseAndAddGap(T value, String gap)

@@ -34,7 +34,7 @@ public interface SolrInfoMBean {
 
   /**
    * Simple common usage name, e.g. BasicQueryHandler,
-   * or fully qualified clas name.
+   * or fully qualified class name.
    */
   public String getName();
   /** Simple common usage version, e.g. 2.0 */

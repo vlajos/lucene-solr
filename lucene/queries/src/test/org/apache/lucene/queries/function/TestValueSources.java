@@ -401,7 +401,7 @@ public class TestValueSources extends LuceneTestCase {
       assertHits(new FunctionQuery(vs), new float[] { 42F, 1F });
 
       // valuesource should exist only for things matching the term query
-      // sanity check via quick & dirty wrapper arround tf
+      // sanity check via quick & dirty wrapper around tf
       ValueSource expected = new MultiFloatFunction(new ValueSource[] {
           new TFValueSource("bogus", "bogus", "string", new BytesRef("bar"))}) {
 

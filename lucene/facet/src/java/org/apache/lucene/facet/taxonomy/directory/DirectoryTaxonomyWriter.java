@@ -745,7 +745,7 @@ public class DirectoryTaxonomyWriter implements TaxonomyWriter {
   public int getParent(int ordinal) throws IOException {
     ensureOpen();
     // Note: the following if() just enforces that a user can never ask
-    // for the parent of a nonexistant category - even if the parent array
+    // for the parent of a nonexistent category - even if the parent array
     // was allocated bigger than it really needs to be.
     if (ordinal >= nextID) {
       throw new ArrayIndexOutOfBoundsException("requested ordinal is bigger than the largest ordinal in the taxonomy");

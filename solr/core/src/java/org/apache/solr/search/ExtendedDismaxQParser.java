@@ -921,7 +921,7 @@ public class ExtendedDismaxQParser extends QParser {
       } else if (inString != 0 && ch==inString) {
         inString=0;
       } else if (!ignoreQuote && ch=='"') {
-        // If char is directly preceeded by a number or letter
+        // If char is directly preceded by a number or letter
         // then don't treat it as the start of a string.
         if (!Character.isLetterOrDigit(prevChar)) {
           inString=ch;

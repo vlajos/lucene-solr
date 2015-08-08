@@ -139,7 +139,7 @@ public class TestSolr4Spatial2 extends SolrTestCaseJ4 {
     assertJQ(sameReq, "/response/numFound==1", "/response/docs/[0]/id=='1'");
 
     // When there are new segments, we accumulate another hit. This tests the cache was not blown away on commit.
-    // Checking equality for the first reader's cache key indicates wether the cache should still be valid.
+    // Checking equality for the first reader's cache key indicates whether the cache should still be valid.
     Object leafKey2 = getFirstLeafReaderKey();
     assertEquals(leafKey1.equals(leafKey2) ? "2" : "1", cache.getStatistics().get("cumulative_hits").toString());
 

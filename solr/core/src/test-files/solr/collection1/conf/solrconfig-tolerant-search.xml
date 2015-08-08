@@ -11,7 +11,7 @@
 	OF ANY KIND, either express or implied. See the License for the specific 
 	language governing permissions and limitations under the License. -->
 
-<!-- This is a "kitchen sink" config file that tests can use. When writting 
+<!-- This is a "kitchen sink" config file that tests can use. When writing 
 	a new test, feel free to add *new* items (plugins, config options, etc...) 
 	as long as they don't break any existing tests. if you need to test something 
 	esoteric please add a new "solrconfig-your-esoteric-purpose.xml" config file. 

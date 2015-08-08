@@ -167,7 +167,7 @@ public class DistribCursorPagingTest extends AbstractFullDistribZkTestBase {
     assertDocList(rsp);
     assertEquals(cursorMark, assertHashNextCursorMark(rsp));
 
-    // don't add in order of either field to ensure we aren't inadvertantly 
+    // don't add in order of either field to ensure we aren't inadvertently 
     // counting on internal docid ordering
     indexDoc(sdoc("id", "9", "str", "c", "float", "-3.2", "int", "42"));
     indexDoc(sdoc("id", "7", "str", "c", "float", "-3.2", "int", "-1976"));
@@ -696,7 +696,7 @@ public class DistribCursorPagingTest extends AbstractFullDistribZkTestBase {
    * Given a set of params, executes a cursor query using {@link CursorMarkParams#CURSOR_MARK_START} 
    * and then continuously walks the results using {@link CursorMarkParams#CURSOR_MARK_START} as long 
    * as a non-0 number of docs ar returned.  This method records the the set of all id's
-   * (must be postive ints) encountered and throws an assertion failure if any id is 
+   * (must be positive ints) encountered and throws an assertion failure if any id is 
    * encountered more then once, or if the set grows above maxSize
    * </p>
    *

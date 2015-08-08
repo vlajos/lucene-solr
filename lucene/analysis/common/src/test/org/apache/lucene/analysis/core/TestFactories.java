@@ -77,7 +77,7 @@ public class TestFactories extends BaseTokenStreamTestCase {
         assertFalse(mtc instanceof CharFilterFactory);
       }
       
-      // beast it just a little, it shouldnt throw exceptions:
+      // beast it just a little, it should not throw exceptions:
       // (it should have thrown them in initialize)
       Analyzer a = new FactoryAnalyzer(factory, null, null);
       checkRandomData(random(), a, 20, 20, false, false);
@@ -99,7 +99,7 @@ public class TestFactories extends BaseTokenStreamTestCase {
         assertTrue(mtc instanceof TokenFilterFactory);
       }
       
-      // beast it just a little, it shouldnt throw exceptions:
+      // beast it just a little, it should not throw exceptions:
       // (it should have thrown them in initialize)
       Analyzer a = new FactoryAnalyzer(assertingTokenizer, factory, null);
       checkRandomData(random(), a, 20, 20, false, false);
@@ -121,7 +121,7 @@ public class TestFactories extends BaseTokenStreamTestCase {
         assertTrue(mtc instanceof CharFilterFactory);
       }
       
-      // beast it just a little, it shouldnt throw exceptions:
+      // beast it just a little, it should not throw exceptions:
       // (it should have thrown them in initialize)
       Analyzer a = new FactoryAnalyzer(assertingTokenizer, null, factory);
       checkRandomData(random(), a, 20, 20, false, false);

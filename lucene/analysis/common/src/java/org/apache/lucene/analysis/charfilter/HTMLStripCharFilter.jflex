@@ -110,7 +110,7 @@ ServerSideInclude = ( "<!--#" ( [^'\"] | {SingleQuoted} | {DoubleQuoted} )* "-->
 EventAttribute = [oO][nN] {EventAttributeSuffixes} \s* "=" \s* ( {SingleQuoted} | {DoubleQuoted} )
 OpenTagContent = ( {EventAttribute} | [^<>] | {ServerSideInclude} )*
 
-InlineElment = ( [aAbBiIqQsSuU]                   |
+InlineElement = ( [aAbBiIqQsSuU]                   |
                  [aA][bB][bB][rR]                 |
                  [aA][cC][rR][oO][nN][yY][mM]     |
                  [bB][aA][sS][eE][fF][oO][nN][tT] |
@@ -594,7 +594,7 @@ InlineElment = ( [aAbBiIqQsSuU]                   |
       return BR_END_TAG_REPLACEMENT;
     }
   }
-  {InlineElment} {
+  {InlineElement} {
     inputSegment.write(zzBuffer, zzStartRead, yylength());
     if (null != escapedTags
         && escapedTags.contains(zzBuffer, zzStartRead, yylength())) {
@@ -697,7 +697,7 @@ InlineElment = ( [aAbBiIqQsSuU]                   |
 }
 
 <LEFT_ANGLE_BRACKET, LEFT_ANGLE_BRACKET_SPACE> {
-  {InlineElment} {
+  {InlineElement} {
     inputSegment.write(zzBuffer, zzStartRead, yylength());
     if (null != escapedTags
         && escapedTags.contains(zzBuffer, zzStartRead, yylength())) {

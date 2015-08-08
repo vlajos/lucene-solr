@@ -844,7 +844,7 @@ class MemoryDocValuesProducer extends DocValuesProducer {
         return SeekStatus.END;
       } else if (term().equals(text)) {
         // TODO: add SeekStatus to FSTEnum like in https://issues.apache.org/jira/browse/LUCENE-3729
-        // to remove this comparision?
+        // to remove this comparison?
         return SeekStatus.FOUND;
       } else {
         return SeekStatus.NOT_FOUND;

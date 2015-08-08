@@ -22,7 +22,7 @@ public class SpellCheckCorrection {
   private Token original;
   private String originalAsString = null;
   private String correction;
-  private int numberOfOccurences;
+  private int numberOfOccurrences;
 
   public Token getOriginal() {
     return original;
@@ -48,12 +48,12 @@ public class SpellCheckCorrection {
     this.correction = correction;
   }
 
-  public int getNumberOfOccurences() {
-    return numberOfOccurences;
+  public int getNumberOfOccurrences() {
+    return numberOfOccurrences;
   }
 
-  public void setNumberOfOccurences(int numberOfOccurences) {
-    this.numberOfOccurences = numberOfOccurences;
+  public void setNumberOfOccurrences(int numberOfOccurrences) {
+    this.numberOfOccurrences = numberOfOccurrences;
   }
 
 }

@@ -336,7 +336,7 @@
     We want to detect here only a limited set of versions and placed in normalized form in ${build.java.runtime},
     every other version is normalized to "unknown":
     - To define a target to be only run on a specific version, add <equals/> condition to one of the supplied versions.
-    - To explicitely exclude specific versions (and unknown ones), add a condition to disallow "unknown" and some versions like "1.9"!
+    - To explicitly exclude specific versions (and unknown ones), add a condition to disallow "unknown" and some versions like "1.9"!
    -->
   <condition property="build.java.runtime" value="${-cleaned.specification.version}" else="unknown">
     <or>

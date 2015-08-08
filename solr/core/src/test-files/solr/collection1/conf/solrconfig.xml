@@ -18,7 +18,7 @@
 -->
 
 <!-- This is a "kitchen sink" config file that tests can use.
-     When writting a new test, feel free to add *new* items (plugins,
+     When writing a new test, feel free to add *new* items (plugins,
      config options, etc...) as long as they don't break any existing
      tests.  if you need to test something esoteric please add a new
      "solrconfig-your-esoteric-purpose.xml" config file.

@@ -178,7 +178,7 @@ public class TestCustomSearcherSort extends LuceneTestCase {
     }
   }
   
-  // Simply write to console - choosen to be independant of log4j etc
+  // Simply write to console - chosen to be independent of log4j etc
   private void log(String message) {
     if (VERBOSE) System.out.println(message);
   }

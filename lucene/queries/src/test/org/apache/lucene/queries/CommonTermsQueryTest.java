@@ -517,7 +517,7 @@ public class CommonTermsQueryTest extends LuceneTestCase {
   }
   
   /**
-   * populates a writer with random stuff. this must be fully reproducable with
+   * populates a writer with random stuff. this must be fully reproducible with
    * the seed!
    */
   public static void createRandomIndex(int numdocs, RandomIndexWriter writer,

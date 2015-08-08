@@ -627,7 +627,7 @@ public class ReplicationHandler extends RequestHandlerBase implements SolrCoreAw
    * For configuration files, checksum of the file is included because, unlike index files, they may have same content
    * but different timestamps.
    * <p/>
-   * The local conf files information is cached so that everytime it does not have to compute the checksum. The cache is
+   * The local conf files information is cached so that every time it does not have to compute the checksum. The cache is
    * refreshed only if the lastModified of the file changes
    */
   List<Map<String, Object>> getConfFileInfoFromCache(NamedList<String> nameAndAlias,

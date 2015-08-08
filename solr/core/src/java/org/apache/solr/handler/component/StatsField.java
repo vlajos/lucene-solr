@@ -150,7 +150,7 @@ public class StatsField {
     }
     
     /**
-     * Given a String, returns the corrisponding Stat enum value if any, otherwise returns null.
+     * Given a String, returns the corresponding Stat enum value if any, otherwise returns null.
      */
     public static Stat forName(String paramKey) {
       try {
@@ -181,7 +181,7 @@ public class StatsField {
   }
 
   /**
-   * the equivilent stats if "calcdistinct" is specified
+   * the equivalent stats if "calcdistinct" is specified
    * @see Stat#countDistinct
    * @see Stat#distinctValues
    */
@@ -255,7 +255,7 @@ public class StatsField {
         // figure out what type of query we are dealing, get the most direct ValueSource
         vs = extractValueSource(qp.parse());
 
-        // if this ValueSource directly corrisponds to a SchemaField, act as if
+        // if this ValueSource directly corresponds to a SchemaField, act as if
         // we were asked to compute stats on it directly
         // ie:  "stats.field={!func key=foo}field(foo)" == "stats.field=foo"
         sf = extractSchemaField(vs, searcher.getSchema());
@@ -326,7 +326,7 @@ public class StatsField {
    *
    * @param vs ValueSource we've been asked to compute stats of
    * @param schema The Schema to use
-   * @returns Corrisponding {@link SchemaField} or null if the ValueSource is more complex
+   * @returns Corresponding {@link SchemaField} or null if the ValueSource is more complex
    * @see FieldCacheSource
    */
   private static SchemaField extractSchemaField(ValueSource vs, IndexSchema schema) {
@@ -338,7 +338,7 @@ public class StatsField {
   }
 
   /** 
-   * The key to be used when refering to this {@link StatsField} instance in the 
+   * The key to be used when referring to this {@link StatsField} instance in the 
    * response tp clients.
    */
   public String getOutputKey() {
@@ -539,12 +539,12 @@ public class StatsField {
 
     // if no individual stat setting use the default set
     if ( ! ( statSpecifiedByLocalParam
-             // calcdistinct (as a local param) is a psuedo-stat, prevents default set
+             // calcdistinct (as a local param) is a pseudo-stat, prevents default set
              || localParams.getBool("calcdistinct", false) ) ) {
       statsInResponse.addAll(DEFAULT_STATS);
     }
 
-    // calcDistinct is a psuedo-stat with optional top level param default behavior
+    // calcDistinct is a pseudo-stat with optional top level param default behavior
     // if not overridden by the specific individual stats
     if (localParams.getBool("calcdistinct", topLevelCalcDistinct)) {
       for (Stat stat : CALCDISTINCT_PSUEDO_STAT) {
@@ -640,7 +640,7 @@ public class StatsField {
       final NumericType hashableNumType = getHashableNumericType(field);
 
       // some sane defaults
-      int log2m = 13;   // roughly equivilent to "cardinality='0.33'"
+      int log2m = 13;   // roughly equivalent to "cardinality='0.33'"
       int regwidth = 6; // with decent hash, this is plenty for all valid long hashes
 
       if (NumericType.FLOAT.equals(hashableNumType) || NumericType.INT.equals(hashableNumType)) {
@@ -652,16 +652,16 @@ public class StatsField {
       }
 
       // TODO: we could attempt additional reductions in the default regwidth based on index
-      // statistics -- but thta doesn't seem worth the effort.  for tiny indexes, the 
+      // statistics -- but that doesn't seem worth the effort.  for tiny indexes, the 
       // EXPLICIT and SPARSE HLL representations have us nicely covered, and in general we don't 
-      // want to be too aggresive about lowering regwidth or we could really poor results if 
+      // want to be too aggressive about lowering regwidth or we could really poor results if 
       // log2m is also low and  there is heavy hashkey collision
 
       try {
         // NFE will short out here if it's not a number
         final double accuracyOpt = Double.parseDouble(cardinalityOpt);
 
-        // if a float between 0 and 1 is specified, treat it as a prefrence of accuracy
+        // if a float between 0 and 1 is specified, treat it as a preference of accuracy
         // - 0 means accuracy is not a concern, save RAM
         // - 1 means be as accurate as possible, using as much RAM as needed.
 
@@ -730,10 +730,10 @@ public class StatsField {
     public HLL newHLL() {
       // Although it (in theory) saves memory for "medium" size sets, the SPARSE type seems to have
       // some nasty impacts on response time as it gets larger - particularly in distrib requests.
-      // Merging large SPARSE HLLs is much much slower then merging FULL HLLs with the same num docs
+      // Merging large SPARSE HLLs is much much slower than merging FULL HLLs with the same num docs
       //
       // TODO: add more tunning options for this.
-      return new HLL(getLog2m(), getRegwidth(), -1 /* auto explict threshold */,
+      return new HLL(getLog2m(), getRegwidth(), -1 /* auto explicit threshold */,
                      false /* no sparse representation */, HLLType.EMPTY);
                      
     }
@@ -741,7 +741,7 @@ public class StatsField {
 
   /**
    * Returns the effective {@link NumericType} for the field for the purposes of hash values.  
-   * ie: If the field has an explict NumericType that is returned; If the field has no explicit 
+   * ie: If the field has an explicit NumericType that is returned; If the field has no explicit 
    * NumericType then {@link NumericType#LONG} is returned;  If field is null, then 
    * {@link NumericType#FLOAT} is assumed for ValueSource.
    */

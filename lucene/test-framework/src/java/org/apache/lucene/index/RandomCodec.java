@@ -56,7 +56,7 @@ import org.apache.lucene.util.TestUtil;
  * a hash is computed up front that determines the mapping.
  * This means fields can be put into things like HashSets and added to
  * documents in different orders and the test will still be deterministic
- * and reproducable.
+ * and reproducible.
  */
 public class RandomCodec extends AssertingCodec {
   /** Shuffled list of postings formats to use for new mappings */

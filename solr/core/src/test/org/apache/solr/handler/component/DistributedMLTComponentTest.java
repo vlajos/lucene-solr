@@ -111,7 +111,7 @@ public class DistributedMLTComponentTest extends BaseDistributedSearchTestCase {
     handle.put("13", UNORDERED);
     handle.put("7", UNORDERED);
     
-    // keep in mind that MLT params influence stats that are calulated
+    // keep in mind that MLT params influence stats that are calculated
     // per shard - because of this, depending on params, distrib and single
     // shard queries will not match.
     

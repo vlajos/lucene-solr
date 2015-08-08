@@ -230,9 +230,9 @@ public final class CommitTracker implements Runnable {
   @Override
   public String toString() {
     if (timeUpperBound > 0 || docsUpperBound > 0) {
-      return (timeUpperBound > 0 ? ("if uncommited for " + timeUpperBound + "ms; ")
+      return (timeUpperBound > 0 ? ("if uncommitted for " + timeUpperBound + "ms; ")
           : "")
-          + (docsUpperBound > 0 ? ("if " + docsUpperBound + " uncommited docs ")
+          + (docsUpperBound > 0 ? ("if " + docsUpperBound + " uncommitted docs ")
               : "");
       
     } else {

@@ -298,7 +298,7 @@ public class TestIndexWriterCommit extends LuceneTestCase {
                                      .setOpenMode(OpenMode.APPEND));
     writer.forceMerge(1);
 
-    // Open a reader before closing (commiting) the writer:
+    // Open a reader before closing (committing) the writer:
     DirectoryReader reader = DirectoryReader.open(dir);
 
     // Reader should see index as multi-seg at this

@@ -609,7 +609,7 @@ public class BasicFunctionalityTest extends SolrTestCaseJ4 {
                  "subject", "The Dude"));
     assertU(commit());
 
-    assertQ("everthing should have recent timestamp",
+    assertQ("everything should have recent timestamp",
             req("timestamp:[NOW-10MINUTES TO NOW]")
             ,"*[count(//doc)=3]"
             ,"//date[@name='timestamp']"
@@ -804,7 +804,7 @@ public class BasicFunctionalityTest extends SolrTestCaseJ4 {
     assertU(adoc("id", "6",  "bday", "NOW+2YEARS"));
     assertU(commit());
     
-    // a ridiculoulsy long date math expression that's still equivilent to july4
+    // a ridiculoulsy long date math expression that's still equivalent to july4
     final StringBuilder july4Long = new StringBuilder(july4);
     final int iters = atLeast(10);
     for (int i = 0; i < iters; i++) {

@@ -330,7 +330,7 @@ public class IndexSearcher {
    *  When {@code needsScores} is {@code true}, this returns the
    *  {@link Similarity} that has been set through {@link #setSimilarity(Similarity)}
    *  or the {@link #getDefaultSimilarity()} default {@link Similarity} if none
-   *  has been set explicitely. */
+   *  has been set explicitly. */
   public Similarity getSimilarity(boolean needsScores) {
     return needsScores ? similarity : NON_SCORING_SIMILARITY;
   }

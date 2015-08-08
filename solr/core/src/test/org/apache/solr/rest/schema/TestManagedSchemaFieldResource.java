@@ -116,7 +116,7 @@ public class TestManagedSchemaFieldResource extends RestTestBase {
   }
 
   @Test
-  public void testAddFieldWithMulipleOptions() throws Exception {
+  public void testAddFieldWithMultipleOptions() throws Exception {
     assertQ("/schema/fields/newfield?indent=on&wt=xml",
             "count(/response/lst[@name='field']) = 0",
             "/response/lst[@name='responseHeader']/int[@name='status'] = '404'",

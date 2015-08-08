@@ -818,7 +818,7 @@ public class KStemmer {
       word_char = word.charAt(j);
       if (!((word_char == 'e') || (word_char == 'a'))) return;
       word.setLength(j);
-      word.unsafeWrite('e'); /* try converting -e/ance to -e (adherance/adhere) */
+      word.unsafeWrite('e'); /* try converting -e/ance to -e (adherence/adhere) */
       k = j;
       if (lookup()) return;
       word.setLength(j); /*

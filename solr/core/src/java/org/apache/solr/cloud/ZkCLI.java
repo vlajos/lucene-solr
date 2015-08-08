@@ -81,7 +81,7 @@ public class ZkCLI {
    * 
    * Upload a named config set from a given directory.
    * 
-   * Link a named config set explicity to a collection.
+   * Link a named config set explicitly to a collection.
    * 
    * Clear ZooKeeper info.
    * 

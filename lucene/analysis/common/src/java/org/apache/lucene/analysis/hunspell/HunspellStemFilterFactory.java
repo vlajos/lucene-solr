@@ -65,7 +65,7 @@ public class HunspellStemFilterFactory extends TokenFilterFactory implements Res
     affixFile = get(args, PARAM_AFFIX);
     ignoreCase = getBoolean(args, PARAM_IGNORE_CASE, false);
     longestOnly = getBoolean(args, PARAM_LONGEST_ONLY, false);
-    // this isnt necessary: we properly load all dictionaries.
+    // this isn't necessary: we properly load all dictionaries.
     // but recognize and ignore for back compat
     getBoolean(args, "strictAffixParsing", true);
     // this isn't necessary: multi-stage stripping is fixed and 

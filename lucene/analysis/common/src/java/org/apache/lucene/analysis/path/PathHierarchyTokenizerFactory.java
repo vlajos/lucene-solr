@@ -49,7 +49,7 @@ import org.apache.lucene.util.AttributeFactory;
  * &lt;/fieldType&gt;
  * </pre>
  * <p>
- * In this example however we see the oposite configuration, so that a query 
+ * In this example however we see the opposite configuration, so that a query 
  * for <code>Books/NonFic/Science/Physics</code> would match documents 
  * containing <code>Books/NonFic</code>, <code>Books/NonFic/Science</code>, 
  * or <code>Books/NonFic/Science/Physics</code>, but not 

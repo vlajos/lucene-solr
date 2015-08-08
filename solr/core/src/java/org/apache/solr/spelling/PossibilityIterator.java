@@ -79,7 +79,7 @@ public class PossibilityIterator implements
         SpellCheckCorrection correction = new SpellCheckCorrection();
         correction.setOriginal(token);
         correction.setCorrection(entry1.getKey());
-        correction.setNumberOfOccurences(entry1.getValue());
+        correction.setNumberOfOccurrences(entry1.getValue());
         possibleCorrections.add(correction);
       }
       possibilityList.add(possibleCorrections);
@@ -400,7 +400,7 @@ public class PossibilityIterator implements
           sb.append("     ");
           sb.append(corr.getOriginal()).append(">")
               .append(corr.getCorrection()).append(" (").append(
-                  corr.getNumberOfOccurences()).append(")");
+                  corr.getNumberOfOccurrences()).append(")");
         }
       }
       return sb.toString();

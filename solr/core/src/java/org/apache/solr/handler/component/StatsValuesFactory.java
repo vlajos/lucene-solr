@@ -468,7 +468,7 @@ class NumericStatsValues extends AbstractStatsValues<Number> {
   @Override
   public long hash(Number v) {
     // have to use a bit of reflection to ensure good hash values since
-    // we don't have truely type specific stats
+    // we don't have truly type specific stats
     if (v instanceof Long) {
       return hasher.hashLong(v.longValue()).asLong();
     } else if (v instanceof Integer) {
@@ -547,7 +547,7 @@ class NumericStatsValues extends AbstractStatsValues<Number> {
       if (null != min) {
         double minD = min.doubleValue();
         if (null == this.min || minD < this.minD) {
-          // Double for result & cached primitive doulbe to minimize unboxing in future comparisons
+          // Double for result & cached primitive double to minimize unboxing in future comparisons
           this.min = this.minD = minD;
         }
       }
@@ -556,7 +556,7 @@ class NumericStatsValues extends AbstractStatsValues<Number> {
       if (null != max) {
         double maxD = max.doubleValue();
         if (null == this.max || this.maxD < maxD) {
-          // Double for result & cached primitive doulbe to minimize unboxing in future comparisons
+          // Double for result & cached primitive double to minimize unboxing in future comparisons
           this.max = this.maxD = maxD;
         }
       }

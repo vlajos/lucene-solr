@@ -49,7 +49,7 @@ public interface AnalysisParams {
   static final String FIELD_NAME = PREFIX + ".fieldname";
 
   /**
-   * Holds a comma-separated list of field types that the analysis should be peformed for.
+   * Holds a comma-separated list of field types that the analysis should be performed for.
    */
   static final String FIELD_TYPE = PREFIX + ".fieldtype";
 

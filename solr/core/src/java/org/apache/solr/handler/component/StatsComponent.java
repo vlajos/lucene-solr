@@ -214,7 +214,7 @@ class StatsInfo {
   /**
    * Returns the {@link StatsField} associated with the specified (effective) 
    * outputKey, or null if there was no {@link StatsParams#STATS_FIELD} param
-   * that would corrispond with that key.
+   * that would correspond with that key.
    */
   public StatsField getStatsField(String outputKey) {
     return statsFieldMap.get(outputKey);

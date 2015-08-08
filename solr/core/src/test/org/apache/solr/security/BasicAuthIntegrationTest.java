@@ -198,7 +198,7 @@ public class BasicAuthIntegrationTest extends TestMiniSolrCloudCluster {
   }
 
   //the password is 'SolrRocks'
-  //this could be generated everytime. But , then we will not know if there is any regression
+  //this could be generated every time. But , then we will not know if there is any regression
   private static final String STD_CONF = "{\n" +
       "  'authentication':{\n" +
       "    'class':'solr.BasicAuthPlugin',\n" +

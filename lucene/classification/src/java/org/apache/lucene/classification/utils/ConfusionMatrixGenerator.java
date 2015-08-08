@@ -47,7 +47,7 @@ public class ConfusionMatrixGenerator {
    * @param textFieldName  the nome the Lucene field used as the classifier's input
    * @param <T>            the return type of the {@link ClassificationResult} returned by the given {@link Classifier}
    * @return a {@link org.apache.lucene.classification.utils.ConfusionMatrixGenerator.ConfusionMatrix}
-   * @throws IOException if problems occurr while reading the index or using the classifier
+   * @throws IOException if problems occur while reading the index or using the classifier
    */
   public static <T> ConfusionMatrix getConfusionMatrix(LeafReader reader, Classifier<T> classifier, String classFieldName, String textFieldName) throws IOException {
 

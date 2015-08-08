@@ -570,7 +570,7 @@ public class BrazilianStemmer {
   private boolean step2() {
     if (RV == null) return false ;
 
-    // suffix lenght = 7
+    // suffix length = 7
     if (RV.length() >= 7) {
       if (suffix(RV,"issemos")) {
         CT = removeSuffix(CT,"issemos") ; return true;

@@ -36,7 +36,7 @@ public class TestToStringUtil extends LuceneTestCase {
   }
   
   // see http://en.wikipedia.org/wiki/Hepburn_romanization,
-  // but this isnt even thorough or really probably what we want!
+  // but this isn't even thorough or really probably what we want!
   public void testHepburnTable() {
     Map<String,String> table = new HashMap<String,String>() {{
       put("ア", "a");   put("イ", "i");   put("ウ", "u");   put("エ", "e");   put("オ", "o");

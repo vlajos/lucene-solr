@@ -158,7 +158,7 @@ public abstract class AnalysisRequestHandlerBase extends RequestHandlerBase {
       tokenStream.end();
       return tokens;
     } catch (IOException ioe) {
-      throw new RuntimeException("Error occured while iterating over tokenstream", ioe);
+      throw new RuntimeException("Error occurred while iterating over tokenstream", ioe);
     }
   }
 
@@ -186,7 +186,7 @@ public abstract class AnalysisRequestHandlerBase extends RequestHandlerBase {
       }
       tokenStream.end();
     } catch (IOException ioe) {
-      throw new RuntimeException("Error occured while iterating over tokenstream", ioe);
+      throw new RuntimeException("Error occurred while iterating over tokenstream", ioe);
     } finally {
       IOUtils.closeWhileHandlingException(tokenStream);
     }

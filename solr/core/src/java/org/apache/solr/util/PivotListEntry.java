@@ -72,7 +72,7 @@ public enum PivotListEntry {
   
   /**
    * Given a {@link NamedList} representing a Pivot Value, extracts the Object 
-   * which corrisponds to this {@link PivotListEntry}, or returns null if not found.
+   * which corresponds to this {@link PivotListEntry}, or returns null if not found.
    */
   public Object extract(NamedList<Object> pivotList) {
     if (this.minIndex < MIN_INDEX_OF_OPTIONAL) {

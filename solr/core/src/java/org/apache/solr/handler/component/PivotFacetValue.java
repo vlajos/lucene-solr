@@ -66,11 +66,11 @@ public class PivotFacetValue {
    */
   public Comparable getValue() { return value; }
 
-  /** The count corrisponding to the value modeled by this <code>PivotFacetValue</code> */
+  /** The count corresponding to the value modeled by this <code>PivotFacetValue</code> */
   public int getCount() { return count; }
 
   /** 
-   * The {@link PivotFacetField} corrisponding to the nested child pivot for this 
+   * The {@link PivotFacetField} corresponding to the nested child pivot for this 
    * <code>PivotFacetValue</code>. May be null if this object is the leaf of a pivot.
    */
   public PivotFacetField getChildPivot() { return childPivot; }

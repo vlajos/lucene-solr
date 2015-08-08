@@ -26,7 +26,7 @@ import org.apache.lucene.util.TestUtil;
  * Tests AutoPrefix's postings
  */
 
-// NOTE: we don't extend BasePostingsFormatTestCase becase we can only handle DOCS_ONLY fields:
+// NOTE: we don't extend BasePostingsFormatTestCase because we can only handle DOCS_ONLY fields:
 
 public class TestAutoPrefixPostingsFormat extends LuceneTestCase {
   public void test() throws Exception {

@@ -292,7 +292,7 @@ public class HighlighterTest extends SolrTestCaseJ4 {
     TestHarness.LocalRequestFactory sumLRF = h.getRequestFactory(
       "standard", 0, 200, args);
     
-    assertU(adoc("textgap", "first entry hasnt queryword",
+    assertU(adoc("textgap", "first entry hasn't queryword",
         "textgap", "second entry has queryword long",
         "id", "1"));
     assertU(commit());

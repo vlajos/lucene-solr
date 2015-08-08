@@ -1071,7 +1071,7 @@ public abstract class FieldType extends FieldProperties {
     
     /** 
      * The appropriate <code>SortedSetSelector.Type</code> option for this <code>MultiValueSelector</code>,
-     * may be null if there is no equivilent
+     * may be null if there is no equivalent
      */
     public SortedSetSelector.Type getSortedSetSelectorType() {
       return sType;
@@ -1079,7 +1079,7 @@ public abstract class FieldType extends FieldProperties {
 
     /** 
      * The appropriate <code>SortedNumericSelector.Type</code> option for this <code>MultiValueSelector</code>,
-     * may be null if there is no equivilent
+     * may be null if there is no equivalent
      */
     public SortedNumericSelector.Type getSortedNumericSelectorType() {
       return nType;
@@ -1095,9 +1095,9 @@ public abstract class FieldType extends FieldProperties {
 
     /**
      * Returns a MultiValueSelector matching the specified (case insensitive) label, or null if 
-     * no corrisponding MultiValueSelector exists.
+     * no corresponding MultiValueSelector exists.
      * 
-     * @param label a non null label to be checked for a corrisponding MultiValueSelector
+     * @param label a non null label to be checked for a corresponding MultiValueSelector
      * @return a MultiValueSelector or null if no MultiValueSelector matches the specified label
      */
     public static MultiValueSelector lookup(String label) {

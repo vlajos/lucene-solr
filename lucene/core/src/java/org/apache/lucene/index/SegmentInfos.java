@@ -568,7 +568,7 @@ public final class SegmentInfos implements Cloneable, Iterable<SegmentCommitInfo
     return generation;
   }
 
-  /** Returns last succesfully read or written generation. */
+  /** Returns last successfully read or written generation. */
   public long getLastGeneration() {
     return lastGeneration;
   }

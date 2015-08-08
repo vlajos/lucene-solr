@@ -1530,7 +1530,7 @@ public class CheckIndex implements Closeable {
             throw new RuntimeException("seek to last term " + lastTerm + " failed");
           }
           if (termsEnum.term().equals(lastTerm.get()) == false) {
-            throw new RuntimeException("seek to last term " + lastTerm.get() + " returned FOUND but seeked to the wrong term " + termsEnum.term());
+            throw new RuntimeException("seek to last term " + lastTerm.get() + " returned FOUND but sought to the wrong term " + termsEnum.term());
           }
           
           int expectedDocFreq = termsEnum.docFreq();
@@ -1578,7 +1578,7 @@ public class CheckIndex implements Closeable {
                 throw new RuntimeException("seek to existing term " + seekTerms[i] + " failed");
               }
               if (termsEnum.term().equals(seekTerms[i]) == false) {
-                throw new RuntimeException("seek to existing term " + seekTerms[i] + " returned FOUND but seeked to the wrong term " + termsEnum.term());
+                throw new RuntimeException("seek to existing term " + seekTerms[i] + " returned FOUND but sought to the wrong term " + termsEnum.term());
               }
               
               postings = termsEnum.postings(postings, PostingsEnum.NONE);

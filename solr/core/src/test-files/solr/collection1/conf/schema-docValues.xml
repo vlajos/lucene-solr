@@ -36,7 +36,7 @@
 
     <!-- numeric field types that store and index the text
          value verbatim (and hence don't sort correctly or support range queries.)
-         These are provided more for backward compatability, allowing one
+         These are provided more for backward compatibility, allowing one
          to create a schema that matches an existing lucene index.
     -->
     <fieldType name="int" class="solr.TrieIntField" precisionStep="0" omitNorms="true" positionIncrementGap="0"/>

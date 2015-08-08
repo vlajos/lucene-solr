@@ -387,7 +387,7 @@ public class SolrPluginUtils {
 
     Explanation[] details = e.getDetails();
 
-    // short circut out
+    // short circuit out
     if (0 == details.length) return out;
 
     List<NamedList<Object>> kids
@@ -585,7 +585,7 @@ public class SolrPluginUtils {
    * <li>
    * No matter what number the calculation arrives at,
    * BooleanQuery.setMinShouldMatch() will never be called with a
-   * value greater then the number of optional clauses (or less then 1)
+   * value greater than the number of optional clauses (or less then 1)
    * </li>
    * </ul>
    *
@@ -673,7 +673,7 @@ public class SolrPluginUtils {
       return result;
     }
 
-    /* otherwise, simple expresion */
+    /* otherwise, simple expression */
 
     if (-1 < spec.indexOf('%')) {
       /* percentage - assume the % was the last char.  If not, let Integer.parseInt fail. */
@@ -698,7 +698,7 @@ public class SolrPluginUtils {
    *
    * <p>
    * Boosts are multiplied as needed.  Sub-BooleanQueryies which are not
-   * optional will not be flattened.  From will be mangled durring the walk,
+   * optional will not be flattened.  From will be mangled during the walk,
    * so do not attempt to reuse it.
    * </p>
    */
@@ -934,7 +934,7 @@ public class SolrPluginUtils {
 
   /**
    * A CacheRegenerator that can be used whenever the items in the cache
-   * are not dependant on the current searcher.
+   * are not dependent on the current searcher.
    *
    * <p>
    * Flat out copies the oldKey=&gt;oldVal pair into the newCache
@@ -1027,7 +1027,7 @@ public class SolrPluginUtils {
           }
         }
         if (method == null) {
-          throw new RuntimeException("no setter corrresponding to '" + key + "' in " + clazz.getName());
+          throw new RuntimeException("no setter corresponding to '" + key + "' in " + clazz.getName());
         }
         Class pClazz = method.getParameterTypes()[0];
         Object val = entry.getValue();

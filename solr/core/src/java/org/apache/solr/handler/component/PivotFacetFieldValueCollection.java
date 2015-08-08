@@ -31,7 +31,7 @@ import org.apache.solr.common.params.FacetParams;
 /**
  * Emcapsulates a collection of {@link PivotFacetValue}s associated with a 
  * {@link PivotFacetField} withs pecial tracking of a {@link PivotFacetValue} 
- * corrisponding to the <code>null</code> value when {@link FacetParams#FACET_MISSING} 
+ * corresponding to the <code>null</code> value when {@link FacetParams#FACET_MISSING} 
  * is used.
  *
  * @see #markDirty
@@ -83,7 +83,7 @@ public class PivotFacetFieldValueCollection implements Iterable<PivotFacetValue>
   }
 
   /** 
-   * Read-Only access to the Collection of {@link PivotFacetValue}s corrisponding to 
+   * Read-Only access to the Collection of {@link PivotFacetValue}s corresponding to 
    * non-missing values.
    *
    * @see #getMissingValue
@@ -135,8 +135,8 @@ public class PivotFacetFieldValueCollection implements Iterable<PivotFacetValue>
    *
    * @param value of the <code>PivotFacetValue</code> to lookup, if 
    *        <code>null</code> this returns the same as {@link #getMissingValue}
-   * @return the corrisponding <code>PivotFacetValue</code> or null if there is 
-   *        no <code>PivotFacetValue</code> in this collection corrisponding to 
+   * @return the corresponding <code>PivotFacetValue</code> or null if there is 
+   *        no <code>PivotFacetValue</code> in this collection corresponding to 
    *        the specified value.
    */
   public PivotFacetValue get(Comparable value){
@@ -145,7 +145,7 @@ public class PivotFacetFieldValueCollection implements Iterable<PivotFacetValue>
   
   /**
    * Fetchs a {@link PivotFacetValue} from this collection via the index, may not 
-   * be used to fetch the <code>PivotFacetValue</code> corrisponding to the missing-value.
+   * be used to fetch the <code>PivotFacetValue</code> corresponding to the missing-value.
    *
    * @see #getExplicitValuesList
    * @see List#get(int)

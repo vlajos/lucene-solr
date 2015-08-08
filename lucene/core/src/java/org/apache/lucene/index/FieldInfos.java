@@ -198,7 +198,7 @@ public class FieldInfos implements Iterable<FieldInfo> {
     private final Map<String,DocValuesType> docValuesType;
 
     // TODO: we should similarly catch an attempt to turn
-    // norms back on after they were already ommitted; today
+    // norms back on after they were already omitted; today
     // we silently discard the norm but this is badly trappy
     private int lowestUnassignedFieldNumber = -1;
     

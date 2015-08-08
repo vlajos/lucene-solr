@@ -143,7 +143,7 @@ public class CursorPagingTest extends SolrTestCaseJ4 {
     assertEquals(CURSOR_MARK_START, cursorMark);
 
 
-    // don't add in order of any field to ensure we aren't inadvertantly 
+    // don't add in order of any field to ensure we aren't inadvertently 
     // counting on internal docid ordering
     assertU(adoc("id", "9", "str", "c", "float", "-3.2", "int", "42"));
     assertU(adoc("id", "7", "str", "c", "float", "-3.2", "int", "-1976"));
@@ -506,7 +506,7 @@ public class CursorPagingTest extends SolrTestCaseJ4 {
     // cursor queryies can't live in the queryResultCache, but independent filters
     // should still be cached & reused
 
-    // don't add in order of any field to ensure we aren't inadvertantly 
+    // don't add in order of any field to ensure we aren't inadvertently 
     // counting on internal docid ordering
     assertU(adoc("id", "9", "str", "c", "float", "-3.2", "int", "42"));
     assertU(adoc("id", "7", "str", "c", "float", "-3.2", "int", "-1976"));

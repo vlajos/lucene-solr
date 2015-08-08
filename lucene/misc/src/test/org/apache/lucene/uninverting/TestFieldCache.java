@@ -559,7 +559,7 @@ public class TestFieldCache extends LuceneTestCase {
     dir.close();
   }
   
-  public void testNonexistantFields() throws Exception {
+  public void testNonexistentFields() throws Exception {
     Directory dir = newDirectory();
     RandomIndexWriter iw = new RandomIndexWriter(random(), dir);
     Document doc = new Document();

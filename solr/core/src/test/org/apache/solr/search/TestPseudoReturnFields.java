@@ -68,7 +68,7 @@ public class TestPseudoReturnFields extends SolrTestCaseJ4 {
     // a multi valued field (the field value is copied first, then
     // if the type lookup is done again later, we get the wrong thing). SOLR-4036
 
-    // score as psuedo field - precondition checks
+    // score as pseudo field - precondition checks
     for (String name : new String[] {"score", "val_ss"}) {
       SchemaField sf = h.getCore().getLatestSchema().getFieldOrNull(name);
       assertNotNull("Test depends on a (dynamic) field mtching '"+name+
@@ -77,7 +77,7 @@ public class TestPseudoReturnFields extends SolrTestCaseJ4 {
                  "', schema was changed out from under us!", sf.multiValued());
     }
 
-    // score as psuedo field
+    // score as pseudo field
     assertJQ(req("q","*:*", "fq", "id:42", "fl","id,score")
              ,"/response/docs==[{'id':'42','score':1.0}]");
     

@@ -192,7 +192,7 @@ public class DirectoryTaxonomyReader extends TaxonomyReader {
 
       final DirectoryTaxonomyReader newtr;
       if (recreated) {
-        // if recreated, do not reuse anything from this instace. the information
+        // if recreated, do not reuse anything from this instance. the information
         // will be lazily computed by the new instance when needed.
         newtr = new DirectoryTaxonomyReader(r2, taxoWriter, null, null, null);
       } else {
@@ -280,7 +280,7 @@ public class DirectoryTaxonomyReader extends TaxonomyReader {
       // we only store the fact that a category exists, not its inexistence.
       // This is required because the caches are shared with new DTR instances
       // that are allocated from doOpenIfChanged. Therefore, if we only store
-      // information about found categories, we cannot accidently tell a new
+      // information about found categories, we cannot accidentally tell a new
       // generation of DTR that a category does not exist.
       synchronized (ordinalCache) {
         ordinalCache.put(cp, Integer.valueOf(ret));

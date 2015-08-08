@@ -172,7 +172,7 @@ public class TestRawResponseWriter extends SolrTestCaseJ4 {
     writerBinBase.write(bytes, req(), rsp);
     BinaryResponseParser parser = new BinaryResponseParser();
     NamedList<Object> out = parser.processResponse
-      (new ByteArrayInputStream(bytes.toByteArray()), /* encoding irelevent */ null);
+      (new ByteArrayInputStream(bytes.toByteArray()), /* encoding irrelevant */ null);
     assertEquals(RawResponseWriter.CONTENT, out.getName(0));
     assertEquals("test", out.getVal(0));
     assertEquals("foo", out.getName(1));

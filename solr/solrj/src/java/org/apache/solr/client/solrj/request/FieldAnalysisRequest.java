@@ -259,7 +259,7 @@ public class FieldAnalysisRequest extends SolrRequest<FieldAnalysisResponse> {
 
   /**
    * Returns a list of field types the analysis should be performed on. May return {@code null} indicating that no
-   * analysis will be peformed on field types.
+   * analysis will be performed on field types.
    *
    * @return The field types the analysis should be performed on.
    */

@@ -369,7 +369,7 @@ public class TestBlockJoin extends LuceneTestCase {
         .add(childJoinQuery, Occur.MUST)
         .add(new TermQuery(new Term("country", "Oz")), Occur.FILTER)
         .build();
-    assertEquals("noone live there", 0, s.search(query, 1).totalHits);
+    assertEquals("no one live there", 0, s.search(query, 1).totalHits);
       
     // apply the UK filter by the searcher
     query = new BooleanQuery.Builder()

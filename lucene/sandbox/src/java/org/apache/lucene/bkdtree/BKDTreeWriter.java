@@ -49,7 +49,7 @@ import org.apache.lucene.util.RamUsageEstimator;
 //     per leaf, and you can reduce that by putting more points per leaf
 //   - we can quantize the split values to 2 bytes (short): http://people.csail.mit.edu/tmertens/papers/qkdtree.pdf
 //   - we could use threads while building; the higher nodes are very parallelizable
-//   - generalize to N dimenions? i think there are reasonable use cases here, e.g.
+//   - generalize to N dimensions? i think there are reasonable use cases here, e.g.
 //     2 dimensional points to store houses, plus e.g. 3rd dimension for "household income"
 //   - geo3d integration should be straightforward?  better accuracy, faster performance for small-poly-with-bbox cases?  right now the poly
 //     check is very costly...

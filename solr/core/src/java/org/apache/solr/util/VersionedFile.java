@@ -82,7 +82,7 @@ public class VersionedFile
       is = new FileInputStream(f);
     }
 
-    // delete old files only after we have successfuly opened the newest
+    // delete old files only after we have successfully opened the newest
     if (oldFiles != null) {
       delete(oldFiles);
     }

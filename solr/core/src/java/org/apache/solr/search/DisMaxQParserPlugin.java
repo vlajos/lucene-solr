@@ -77,7 +77,7 @@ import org.apache.solr.request.SolrQueryRequest;
   *           included as is.
   *           This param can be specified multiple times, and the boosts are
   *           are additive.  NOTE: the behaviour listed above is only in effect
-  *           if a single <code>bq</code> paramter is specified.  Hence you can
+  *           if a single <code>bq</code> parameter is specified.  Hence you can
   *           disable it by specifying an additional, blank, <code>bq</code>
   *           parameter.
   * </li>

@@ -69,7 +69,7 @@ public class CdcrVersionReplicationTest extends BaseCdcrDistributedZkTest {
 
       doTestCdcrDocVersions(client);
 
-      commit(SOURCE_COLLECTION); // work arround SOLR-5628
+      commit(SOURCE_COLLECTION); // work around SOLR-5628
     } finally {
       client.close();
     }

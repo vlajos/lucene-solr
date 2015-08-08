@@ -201,7 +201,7 @@ public class FiniteStringsIterator {
      *  no more transitions, returns -1. */
     public int nextLabel(Automaton a) {
       if (label > t.max) {
-        // We've exhaused the current transition's labels;
+        // We've exhausted the current transition's labels;
         // move to next transitions:
         transition++;
         if (transition >= a.getNumTransitions(state)) {

@@ -53,7 +53,7 @@ import org.slf4j.LoggerFactory;
  * executed.  If the request succeeds, then the PingRequestHandler
  * will respond back with a simple "OK" status.  If the request fails,
  * then the PingRequestHandler will respond back with the
- * corrisponding HTTP Error code.  Clients (such as load balancers)
+ * corresponding HTTP Error code.  Clients (such as load balancers)
  * can be configured to poll the PingRequestHandler monitoring for
  * these types of responses (or for a simple connection failure) to
  * know if there is a problem with the Solr server.

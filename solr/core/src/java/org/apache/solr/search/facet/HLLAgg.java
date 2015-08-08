@@ -47,7 +47,7 @@ public class HLLAgg extends StrAggValueSource {
     int log2m = 13;
     int regwidth = 6;
     public HLL getHLL() {
-      return new HLL(log2m, regwidth, -1 /* auto explict threshold */,
+      return new HLL(log2m, regwidth, -1 /* auto explicit threshold */,
           false /* no sparse representation */, HLLType.EMPTY);
     }
   }

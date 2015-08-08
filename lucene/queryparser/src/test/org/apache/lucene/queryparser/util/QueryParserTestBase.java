@@ -755,7 +755,7 @@ public abstract class QueryParserTestBase extends LuceneTestCase {
     
     // Tests bug LUCENE-800
     assertQueryEquals("(item:\\\\ item:ABCD\\\\)", a, "item:\\ item:ABCD\\");
-    assertParseException("(item:\\\\ item:ABCD\\\\))"); // unmatched closing paranthesis 
+    assertParseException("(item:\\\\ item:ABCD\\\\))"); // unmatched closing parenthesis 
     assertQueryEquals("\\*", a, "*");
     assertQueryEquals("\\\\", a, "\\");  // escaped backslash
     

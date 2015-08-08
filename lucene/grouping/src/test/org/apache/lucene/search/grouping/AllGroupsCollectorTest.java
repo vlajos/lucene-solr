@@ -96,7 +96,7 @@ public class AllGroupsCollectorTest extends LuceneTestCase {
 
     // 6 -- no author field
     doc = new Document();
-    doc.add(new TextField("content", "random word stuck in alot of other text", Field.Store.YES));
+    doc.add(new TextField("content", "random word stuck in a lot of other text", Field.Store.YES));
     doc.add(new Field("id", "6", customType));
     w.addDocument(doc);
 

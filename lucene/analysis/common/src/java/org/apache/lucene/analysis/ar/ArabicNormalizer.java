@@ -27,7 +27,7 @@ import static org.apache.lucene.analysis.util.StemmerUtil.*;
  *  Normalization is defined as:
  *  <ul>
  *  <li> Normalization of hamza with alef seat to a bare alef.
- *  <li> Normalization of teh marbuta to heh
+ *  <li> Normalization of the marbuta to heh
  *  <li> Normalization of dotless yeh (alef maksura) to yeh.
  *  <li> Removal of Arabic diacritics (the harakat)
  *  <li> Removal of tatweel (stretching character).

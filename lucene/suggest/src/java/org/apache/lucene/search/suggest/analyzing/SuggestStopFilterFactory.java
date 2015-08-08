@@ -61,7 +61,7 @@ import java.io.IOException;
  * <ul>
  *  <li><code>wordset</code> - This is the default format, which supports one word per 
  *      line (including any intra-word whitespace) and allows whole line comments 
- *      begining with the "#" character.  Blank lines are ignored.  See 
+ *      beginning with the "#" character.  Blank lines are ignored.  See 
  *      {@link WordlistLoader#getLines WordlistLoader.getLines} for details.
  *  </li>
  *  <li><code>snowball</code> - This format allows for multiple words specified on each 

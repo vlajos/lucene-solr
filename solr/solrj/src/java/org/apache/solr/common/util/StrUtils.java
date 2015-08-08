@@ -51,7 +51,7 @@ public class StrUtils {
       } else if (inString != 0 && ch==inString) {
         inString=0;
       } else if (ch=='\'' || ch=='"') {
-        // If char is directly preceeded by a number or letter
+        // If char is directly preceded by a number or letter
         // then don't treat it as the start of a string.
         // Examples: 50" TV, or can't
         if (!Character.isLetterOrDigit(prevChar)) {
@@ -292,7 +292,7 @@ public class StrUtils {
 
   /**
    * writes chars from item to out, backslash escaping as needed based on separator -- 
-   * but does not append the seperator itself
+   * but does not append the separator itself
    */
   public static void appendEscapedTextToBuilder(StringBuilder out, 
                                                  String item, 

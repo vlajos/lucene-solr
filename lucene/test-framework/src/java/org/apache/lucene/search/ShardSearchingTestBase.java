@@ -353,7 +353,7 @@ public abstract class ShardSearchingTestBase extends LuceneTestCase {
         for(int nodeID=0;nodeID<nodeVersions.length;nodeID++) {
           if (nodeID == myNodeID) {
             // My node; run using local shard searcher we
-            // already aquired:
+            // already acquired:
             shardHits[nodeID] = localSearch(query, numHits);
           } else {
             shardHits[nodeID] = searchNode(nodeID, nodeVersions, query, null, numHits, null);
@@ -407,7 +407,7 @@ public abstract class ShardSearchingTestBase extends LuceneTestCase {
           }
           if (nodeID == myNodeID) {
             // My node; run using local shard searcher we
-            // already aquired:
+            // already acquired:
             shardHits[nodeID] = localSearchAfter(shardAfter, query, numHits);
           } else {
             shardHits[nodeID] = searchNode(nodeID, nodeVersions, query, null, numHits, shardAfter);
@@ -430,7 +430,7 @@ public abstract class ShardSearchingTestBase extends LuceneTestCase {
         for(int nodeID=0;nodeID<nodeVersions.length;nodeID++) {
           if (nodeID == myNodeID) {
             // My node; run using local shard searcher we
-            // already aquired:
+            // already acquired:
             shardHits[nodeID] = localSearch(query, numHits, sort);
           } else {
             shardHits[nodeID] = (TopFieldDocs) searchNode(nodeID, nodeVersions, query, sort, numHits, null);

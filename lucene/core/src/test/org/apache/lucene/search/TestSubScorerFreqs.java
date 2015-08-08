@@ -41,7 +41,7 @@ public class TestSubScorerFreqs extends LuceneTestCase {
     dir = new RAMDirectory();
     RandomIndexWriter w = new RandomIndexWriter(
         random(), dir, newIndexWriterConfig(new MockAnalyzer(random())).setMergePolicy(newLogMergePolicy()));
-    // make sure we have more than one segment occationally
+    // make sure we have more than one segment occasionally
     int num = atLeast(31);
     for (int i = 0; i < num; i++) {
       Document doc = new Document();

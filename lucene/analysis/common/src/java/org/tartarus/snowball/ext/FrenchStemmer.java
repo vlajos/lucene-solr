@@ -1300,10 +1300,10 @@ private static final long serialVersionUID = 1L;
                 private boolean r_un_accent() {
             int v_3;
                     // (, line 215
-                    // atleast, line 216
+                    // at least, line 216
                     {
                         int v_1 = 1;
-                        // atleast, line 216
+                        // at least, line 216
                         replab0: while(true)
                         {
                             lab1: do {

@@ -372,7 +372,7 @@ public class TestTaxonomyCombined extends FacetTestCase {
       }
     }
     // (also test invalid categories:)
-    assertEquals(TaxonomyReader.INVALID_ORDINAL, tr.getOrdinal(new FacetLabel("non-existant")));
+    assertEquals(TaxonomyReader.INVALID_ORDINAL, tr.getOrdinal(new FacetLabel("non-existent")));
     assertEquals(TaxonomyReader.INVALID_ORDINAL, tr.getOrdinal(new FacetLabel("Author", "Jules Verne")));
 
     tr.close();

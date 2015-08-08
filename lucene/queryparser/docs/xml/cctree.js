@@ -10,7 +10,7 @@
 */
 
 /*   
-   Geir Landrö : Orignal version, for dTree.
+   Geir Landrö : Original version, for dTree.
    
    Michael Koehrsen (10/2004) : Original modification to
       allow DTDDoc to use this.

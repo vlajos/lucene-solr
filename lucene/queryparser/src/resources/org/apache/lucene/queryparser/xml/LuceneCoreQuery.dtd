@@ -418,7 +418,7 @@ Passes content directly through to the standard LuceneQuery parser see "Lucene Q
 <!-- Controls if matching terms  have to appear in the order listed or can be reversed -->
 <!ATTLIST SpanNear inOrder (true | false) "true">
 
-<!-- Looks for a SpanQuery match occuring near the beginning of a document
+<!-- Looks for a SpanQuery match occurring near the beginning of a document
 	
 	@example 
 	        <em>Find letters where the first 50 words talk about a resignation:</em>

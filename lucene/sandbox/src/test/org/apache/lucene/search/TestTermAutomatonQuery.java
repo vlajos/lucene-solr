@@ -468,7 +468,7 @@ public class TestTermAutomatonQuery extends LuceneTestCase {
     int numDocs = atLeast(100);
     Directory dir = newDirectory();
 
-    // Adds occassional random synonyms:
+    // Adds occasional random synonyms:
     Analyzer analyzer = new Analyzer() {
         @Override
         public TokenStreamComponents createComponents(String fieldName) {

@@ -26,7 +26,7 @@
 
   <indexConfig>
     <!-- we can't include solrconfig.snippet.randomindexconfig.xml because we need
-         to configure an explicit deletion policy, but we still wnat to randomize as much 
+         to configure an explicit deletion policy, but we still want to randomize as much 
          as possible. 
     -->
     <mergePolicy class="${solr.tests.mergePolicy:org.apache.solr.util.RandomMergePolicy}" />

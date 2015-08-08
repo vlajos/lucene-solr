@@ -96,7 +96,7 @@ public class JsonRecordReader {
       if (isRecord) rootNode.isRecord = true;
       return;//the patrh is "/"
     }
-    // deal with how split behaves when seperator starts a string!
+    // deal with how split behaves when separator starts a string!
     if ("".equals(paths.get(0).trim()))
       paths.remove(0);
     rootNode.build(paths, fieldName, multiValued, isRecord, path);
@@ -192,7 +192,7 @@ public class JsonRecordReader {
     static final String RECURSIVE_WILDCARD_PATH = "**";
 
     /**
-     * Build a Node tree structure representing all paths of intrest to us.
+     * Build a Node tree structure representing all paths of interest to us.
      * This must be done before parsing of the JSON stream starts. Each node
      * holds one portion of an path. Taking each path segment in turn this
      * method walks the Node tree  and finds where the new segment should be
@@ -308,7 +308,7 @@ public class JsonRecordReader {
      * tag. If matched then "jump" to that node, otherwise ignore the tag.
      * <p>
      * Note, the list of // expressions found while walking back up the tree
-     * is chached in the HashMap decends. Then if the new tag is to be skipped,
+     * is cached in the HashMap decends. Then if the new tag is to be skipped,
      * any inner chil tags are compared against the cache and jumped to if
      * matched.
      */
@@ -322,7 +322,7 @@ public class JsonRecordReader {
       Set<String> valuesAddedinThisFrame = null;
       if (isRecord || !recordStarted) {
         // This Node is a match for an PATH from a forEach attribute,
-        // prepare for the clean up that will occurr when the record
+        // prepare for the clean up that will occur when the record
         // is emitted after its END_ELEMENT is matched
         valuesAddedinThisFrame = new HashSet<>();
         stack.push(valuesAddedinThisFrame);
@@ -461,19 +461,19 @@ public class JsonRecordReader {
 
 
   /**
-   * The path is split into segments using the '/' as a seperator. However
+   * The path is split into segments using the '/' as a separator. However
    * this method deals with special cases where there is a slash '/' character
    * inside the attribute value e.g. x/@html='text/html'. We split by '/' but
    * then reassemble things were the '/' appears within a quoted sub-string.
    * <p>
-   * We have already enforced that the string must begin with a seperator. This
+   * We have already enforced that the string must begin with a separator. This
    * method depends heavily on how split behaves if the string starts with the
-   * seperator or if a sequence of multiple seperator's appear.
+   * separator or if a sequence of multiple separator's appear.
    */
   private static List<String> splitEscapeQuote(String str) {
     List<String> result = new LinkedList<>();
     String[] ss = str.split("/");
-    for (int i = 0; i < ss.length; i++) { // i=1: skip seperator at start of string
+    for (int i = 0; i < ss.length; i++) { // i=1: skip separator at start of string
       StringBuilder sb = new StringBuilder();
       int quoteCount = 0;
       while (true) {

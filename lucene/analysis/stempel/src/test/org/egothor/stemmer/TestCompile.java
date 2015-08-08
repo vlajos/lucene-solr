@@ -126,7 +126,7 @@ public class TestCompile extends LuceneTestCase {
     return trie;
   }
   
-  private static void assertTrie(Trie trie, Path file, boolean usefull,
+  private static void assertTrie(Trie trie, Path file, boolean useful,
       boolean storeorig) throws Exception {
     LineNumberReader in = new LineNumberReader(Files.newBufferedReader(file, StandardCharsets.UTF_8));
     
@@ -136,7 +136,7 @@ public class TestCompile extends LuceneTestCase {
         StringTokenizer st = new StringTokenizer(line);
         String stem = st.nextToken();
         if (storeorig) {
-          CharSequence cmd = (usefull) ? trie.getFully(stem) : trie
+          CharSequence cmd = (useful) ? trie.getFully(stem) : trie
               .getLastOnPath(stem);
           StringBuilder stm = new StringBuilder(stem);
           Diff.apply(stm, cmd);
@@ -147,7 +147,7 @@ public class TestCompile extends LuceneTestCase {
           if (token.equals(stem)) {
             continue;
           }
-          CharSequence cmd = (usefull) ? trie.getFully(token) : trie
+          CharSequence cmd = (useful) ? trie.getFully(token) : trie
               .getLastOnPath(token);
           StringBuilder stm = new StringBuilder(token);
           Diff.apply(stm, cmd);

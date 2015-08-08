@@ -31,11 +31,11 @@ import org.junit.Test;
 /**
  **/
 
-public class StreamExpressionToExpessionTest extends LuceneTestCase {
+public class StreamExpressionToExpressionTest extends LuceneTestCase {
 
   private StreamFactory factory;
   
-  public StreamExpressionToExpessionTest() {
+  public StreamExpressionToExpressionTest() {
     super();
     
     factory = new StreamFactory()

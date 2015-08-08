@@ -98,7 +98,7 @@ abstract class DisjunctionScorer extends Scorer {
           topScorers.next = null;
         }
 
-        // We need to explicitely set the list of top scorers to avoid the
+        // We need to explicitly set the list of top scorers to avoid the
         // laziness of DisjunctionScorer.score() that would take all scorers
         // positioned on the same doc as the top of the pq, including
         // non-matching scorers

@@ -200,7 +200,7 @@ public class CachingNaiveBayesClassifier extends SimpleNaiveBayesClassifier {
         }
       }
       if (insertPoint != null) {
-        // threadsafe and concurent write
+        // threadsafe and concurrent write
         termCClassHitCache.put(word, searched);
       }
     }

@@ -263,7 +263,7 @@ abstract class ByteBufferIndexInput extends IndexInput implements RandomAccessIn
   }
   
   /**
-   * Creates a slice of this index input, with the given description, offset, and length. The slice is seeked to the beginning.
+   * Creates a slice of this index input, with the given description, offset, and length. The slice is sought to the beginning.
    */
   @Override
   public final ByteBufferIndexInput slice(String sliceDescription, long offset, long length) {    

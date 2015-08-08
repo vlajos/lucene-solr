@@ -425,7 +425,7 @@ public class SolrQuery extends ModifiableSolrParams
 
   /** set facet minimum count
    * 
-   * @param cnt facets having less that cnt hits will be excluded from teh facet list
+   * @param cnt facets having less that cnt hits will be excluded from the facet list
    */
   public SolrQuery setFacetMinCount(int cnt) {
     this.set(FacetParams.FACET_MINCOUNT, cnt);
@@ -1061,7 +1061,7 @@ public class SolrQuery extends ModifiableSolrParams
     }
 
     /**
-     * Creates a decending SortClause for an item
+     * Creates a descending SortClause for an item
      * @param item item to sort on
      */
     public static SortClause desc (String item) {

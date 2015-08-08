@@ -105,7 +105,7 @@ logMessage started by $oldwhoami
 logMessage command: $0 $@
 
 # trap control-c
-trap 'echo "caught INT/TERM, exiting now but partial cleanup may have already occured";logExit aborted 13' INT TERM
+trap 'echo "caught INT/TERM, exiting now but partial cleanup may have already occurred";logExit aborted 13' INT TERM
 
 if [[ -n ${days} ]]
 then

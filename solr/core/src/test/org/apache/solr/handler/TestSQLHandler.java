@@ -379,7 +379,7 @@ public class TestSQLHandler extends AbstractFullDistribZkTestBase {
       tuple = getTuple(new ExceptionStream(solrStream));
       assert(tuple.EOF);
       assert(tuple.EXCEPTION);
-      assert(tuple.getException().contains("Group by queries must include atleast one aggregate function."));
+      assert(tuple.getException().contains("Group by queries must include at least one aggregate function."));
 
     } finally {
       delete();

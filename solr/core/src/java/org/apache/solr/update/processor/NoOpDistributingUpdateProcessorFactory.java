@@ -24,7 +24,7 @@ import org.apache.solr.response.SolrQueryResponse;
 
 /**
  * A No-Op implementation of DistributingUpdateProcessorFactory that 
- * allways returns null.
+ * always returns null.
  * <p> 
  * This implementation may be useful for Solr installations in which neither 
  * the <code>{@link DistributedUpdateProcessorFactory}</code> nor any custom 

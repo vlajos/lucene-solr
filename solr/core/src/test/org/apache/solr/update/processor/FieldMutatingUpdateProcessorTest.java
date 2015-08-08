@@ -732,7 +732,7 @@ public class FieldMutatingUpdateProcessorTest extends UpdateProcessorTestBase {
 
     SolrInputDocument d = null;
 
-    // regardless of chain, all of these should be equivilent
+    // regardless of chain, all of these should be equivalent
     for (String chain : Arrays.asList("clone-single", "clone-multi", 
                                       "clone-array","clone-selector" )) {
 
@@ -766,7 +766,7 @@ public class FieldMutatingUpdateProcessorTest extends UpdateProcessorTestBase {
                    2.3f, d.getField("dest_s").getBoost(), 0.0f);
     }
 
-    // should be equivilent for any chain matching source1_s and source2_s
+    // should be equivalent for any chain matching source1_s and source2_s
     for (String chain : Arrays.asList("clone-multi",
                                       "clone-array","clone-selector" )) {
 

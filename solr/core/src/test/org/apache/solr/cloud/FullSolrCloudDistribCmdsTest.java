@@ -615,7 +615,7 @@ public class FullSolrCloudDistribCmdsTest extends AbstractFullDistribZkTestBase 
     controlClient.deleteByQuery("*:*");
     controlClient.commit();
     
-    // somtimes we use an oversharded collection
+    // sometimes we use an oversharded collection
     createCollection(null, "collection2", 7, 3, 100000, cloudClient, null, "conf1");
     cloudClient.setDefaultCollection("collection2");
     waitForRecoveriesToFinish("collection2", false);

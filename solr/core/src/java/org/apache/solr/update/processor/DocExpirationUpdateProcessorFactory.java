@@ -250,7 +250,7 @@ public final class DocExpirationUpdateProcessorFactory
       } catch (SolrException e) {
         throw confErr(DEL_CHAIN_NAME_CONF + " does not exist: " + deleteChainName, e);
       }
-      // schedule recuring deletion
+      // schedule recurring deletion
       initDeleteExpiredDocsScheduler(core);
     }
   }
@@ -391,7 +391,7 @@ public final class DocExpirationUpdateProcessorFactory
             // No-Op
             return;
           }
-          log.info("Begining periodic deletion of expired docs");
+          log.info("Beginning periodic deletion of expired docs");
 
           UpdateRequestProcessorChain chain = core.getUpdateProcessingChain(deleteChainName);
           UpdateRequestProcessor proc = chain.createProcessor(req, rsp);
@@ -422,11 +422,11 @@ public final class DocExpirationUpdateProcessorFactory
         } catch (IOException ioe) {
           log.error("IOException in periodic deletion of expired docs: " +
                     ioe.getMessage(), ioe);
-          // DO NOT RETHROW: ScheduledExecutor will supress subsequent executions
+          // DO NOT RETHROW: ScheduledExecutor will suppress subsequent executions
         } catch (RuntimeException re) {
           log.error("Runtime error in periodic deletion of expired docs: " + 
                     re.getMessage(), re);
-          // DO NOT RETHROW: ScheduledExecutor will supress subsequent executions
+          // DO NOT RETHROW: ScheduledExecutor will suppress subsequent executions
         } finally {
           SolrRequestInfo.clearRequestInfo();
         }

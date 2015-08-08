@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * <p>
- * A spell checker implementation that loads words from Solr as well as arbitary Lucene indices.
+ * A spell checker implementation that loads words from Solr as well as arbitrary Lucene indices.
  * </p>
  * 
  * <p>

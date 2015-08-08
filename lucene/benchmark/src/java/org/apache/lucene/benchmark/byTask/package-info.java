@@ -272,7 +272,7 @@
  *  <br>Example - <span style="color: #FF0066">{ "ManyAdds" AddDoc &gt; : 1000000</span> -
  *  would add million docs, measure that total, but not save stats for each addDoc.
  *  <br>Notice that the granularity of System.currentTimeMillis() (which is used
- *  here) is system dependant,
+ *  here) is system dependent,
  *  and in some systems an operation that takes 5 ms to complete may show 0 ms
  *  latency time in performance measurements.
  *  Therefore it is sometimes more accurate to look at the elapsed time of a larger

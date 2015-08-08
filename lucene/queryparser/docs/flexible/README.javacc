@@ -23,7 +23,7 @@ here's how:
 
   * To avoid lots of warnings in the generated code:
 
-    add @SupressWarnings("all"), immediately preceding the class declaration to:
+    add @SuppressWarnings("all"), immediately preceding the class declaration to:
 
        QueryParserTokenManager.java
        TokenMgrError.java

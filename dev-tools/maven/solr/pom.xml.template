@@ -119,7 +119,7 @@
             <configuration>
               <!-- disallow undocumented classes like sun.misc.Unsafe: -->
               <internalRuntimeForbidden>true</internalRuntimeForbidden>
-              <!-- for simplicty with servlet-api and commons-io checks, disable this: -->
+              <!-- for simplicity with servlet-api and commons-io checks, disable this: -->
               <failOnUnresolvableSignatures>false</failOnUnresolvableSignatures>
               <bundledSignatures>
                 <bundledSignature>jdk-unsafe</bundledSignature>
@@ -141,7 +141,7 @@
             <configuration>
               <!-- disallow undocumented classes like sun.misc.Unsafe: -->
               <internalRuntimeForbidden>true</internalRuntimeForbidden>
-              <!-- for simplicty with servlet-api and commons-io checks, disable this: -->
+              <!-- for simplicity with servlet-api and commons-io checks, disable this: -->
               <failOnUnresolvableSignatures>false</failOnUnresolvableSignatures>
               <bundledSignatures>
                 <bundledSignature>jdk-unsafe</bundledSignature>

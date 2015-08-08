@@ -314,7 +314,7 @@ public abstract class MergePolicy {
     }
   }
 
-  /** Thrown when a merge was explicity aborted because
+  /** Thrown when a merge was explicitly aborted because
    *  {@link IndexWriter#abortMerges} was called.  Normally
    *  this exception is privately caught and suppresed by
    *  {@link IndexWriter}. */

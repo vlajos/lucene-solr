@@ -116,7 +116,7 @@ public class TestManagedSchemaDynamicFieldResource extends RestTestBase {
   }
 
   @Test
-  public void testAddDynamicFieldWithMulipleOptions() throws Exception {
+  public void testAddDynamicFieldWithMultipleOptions() throws Exception {
     assertQ("/schema/dynamicfields/newdynamicfield_*?indent=on&wt=xml",
             "count(/response/lst[@name='dynamicField']) = 0",
             "/response/lst[@name='responseHeader']/int[@name='status'] = '404'",

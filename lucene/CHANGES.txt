@@ -7227,7 +7227,7 @@ Changes in backwards compatibility policy
   to no longer extend Vector<SegmentInfo> (to update code that is using
   Vector-API, use the new asList() and asSet() methods returning unmodifiable
   collections; modifying SegmentInfos is now only possible through
-  the explicitely declared methods). IndexWriter.segString() now takes
+  the explicitly declared methods). IndexWriter.segString() now takes
   Iterable<SegmentInfo> instead of List<SegmentInfo>. A simple recompile
   should fix this. MergePolicy and SegmentInfos are internal/experimental
   APIs not covered by the strict backwards compatibility policy.
@@ -7337,7 +7337,7 @@ Build
 Test Cases
 
 * LUCENE-3002: added 'tests.iter.min' to control 'tests.iter' by allowing to 
-  stop iterating if at least 'tests.iter.min' ran and a failure occured. 
+  stop iterating if at least 'tests.iter.min' ran and a failure occurred. 
   (Shai Erera, Chris Hostetter)
 
 ======================= Lucene 3.1.0 =======================
@@ -8067,7 +8067,7 @@ Documentation
   methods.  (Santiago M. Mola via Mike McCandless)
 
 * LUCENE-2625: Add a note to IndexReader.termDocs() with additional verbiage
-  that the TermEnum must be seeked since it is unpositioned.
+  that the TermEnum must be sought since it is unpositioned.
   (Adriano Crestani via Robert Muir)
 
 * LUCENE-2894: Use google-code-prettify for syntax highlighting in javadoc.
@@ -8243,7 +8243,7 @@ Changes in runtime behavior
 * LUCENE-2060 (2.9.3 only): Changed ConcurrentMergeScheduler's default for
   maxNumThreads from 3 to 1, because in practice we get the most gains
   from running a single merge in the backround.  More than one
-  concurrent merge causes alot of thrashing (though it's possible on
+  concurrent merge causes a lot of thrashing (though it's possible on
   SSD storage that there would be net gains).  (Jason Rutherglen, Mike
   McCandless)
 
@@ -9417,7 +9417,7 @@ New features
     new expert getReader() method.  This method returns a reader that
     searches the full index, including any uncommitted changes in the
     current IndexWriter session.  This should result in a faster
-    turnaround than the normal approach of commiting the changes and
+    turnaround than the normal approach of committing the changes and
     then reopening a reader.  (Jason Rutherglen via Mike McCandless)
 
  * LUCENE-1603: Added new MultiTermQueryWrapperFilter, to wrap any
@@ -12472,7 +12472,7 @@ Infrastructure
    erases the directory contents, even when the directory
    has already been accessed in this JVM.
  - RangeQuery: Fix issue where an inclusive range query would
-   include the nearest term in the index above a non-existant
+   include the nearest term in the index above a non-existent
    specified upper term.
  - SegmentTermEnum: Fix NullPointerException in clone() method
    when the Term is null.

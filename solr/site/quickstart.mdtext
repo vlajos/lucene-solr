@@ -506,7 +506,7 @@ In your terminal you will see:
 
 #### Pivot facets
 
-Another faceting type is pivot facets, also known as "decison trees", allowing two or more fields to be nested for all
+Another faceting type is pivot facets, also known as "decision trees", allowing two or more fields to be nested for all
 the various possible combinations.  Using the example technical product data, pivot facets can be used to see how many
 of the products in the "book" category (the `cat` field) are in stock or not in stock.  Here's how to get at the raw
 data for this scenario:

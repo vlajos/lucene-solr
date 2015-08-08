@@ -336,7 +336,7 @@ Bug Fixes
   This prevents NPEs in some code paths.  (Konstantin Gribov, hossman)
 
 * SOLR-7829: Fixed a bug in distributed pivot faceting that could result in a facet.missing=true count
-  which was lower then the correct count if facet.sort=index and facet.pivot.mincount > 1 (hossman)
+  which was lower than the correct count if facet.sort=index and facet.pivot.mincount > 1 (hossman)
 
 * SOLR-7842: ZK connection loss or session expiry events should not fire config directory listeners.
   (noble, shalin)
@@ -662,7 +662,7 @@ New Features
   Input parameters and output of both methods are the same. (Tomás Fernández Löbbe)
 
 * SOLR-7473: Facet Module (Json Facet API) range faceting now supports the "mincount"
-  parameter in range facets to supress buckets less than that count.  The default
+  parameter in range facets to suppress buckets less than that count.  The default
   for "mincount" remains 0 for range faceting.
   Example: prices:{ type:range, field:price, mincount:1, start:0, end:100, gap:10 }
   (yonik)
@@ -7053,7 +7053,7 @@ Bug Fixes
   empty index. (Adrien Grand via Mark Miller)
 
 * SOLR-2352: Fixed TermVectorComponent so that it will not fail if the fl 
-  param contains globs or psuedo-fields (hossman)
+  param contains globs or pseudo-fields (hossman)
 
 * SOLR-3541: add missing solrj dependencies to binary packages.
   (Thijs Vonk via siren)
@@ -7412,7 +7412,7 @@ New Features
 * SOLR-3033: ReplicationHandler's backup command now supports a 'maxNumberOfBackups' 
   init param that can be used to delete all but the most recent N backups. (Torsten Krah, James Dyer)
 
-* SOLR-2202: Currency FieldType, whith support for currencies and exchange rates
+* SOLR-2202: Currency FieldType, with support for currencies and exchange rates
   (Greg Fodor & Andrew Morrison via janhoy, rmuir, Uwe Schindler)
 
 * SOLR-3026: eDismax: Locking down which fields can be explicitly queried (user fields aka uf)
@@ -9190,7 +9190,7 @@ be removed in 1.5, until then, using the old syntax will log a warning.
 DIH: The Context API has been changed in a non back-compatible way. In 
 particular, the Context.currentProcess() method now returns a String 
 describing the type of the current import process instead of an int. 
-Similarily, the public constants in Context viz. FULL_DUMP, DELTA_DUMP and 
+Similarly, the public constants in Context viz. FULL_DUMP, DELTA_DUMP and 
 FIND_DELTA are changed to a String type. See SOLR-969 for details.
 
 DIH: The EntityProcessor API has been simplified by moving logic for applying 
@@ -10279,7 +10279,7 @@ the canonical format when generating dates from "Date Math" strings
 (particularly as it pertains to milliseconds ending in trailing zeros).
 As a result equivalent dates could not always be compared properly.
 This problem is corrected in Solr 1.3, but DateField users that might
-have been affected by indexing inconsistent formats of equivilent
+have been affected by indexing inconsistent formats of equivalent
 dates (ie: 1995-12-31T23:59:59Z vs 1995-12-31T23:59:59.000Z) may want
 to consider reindexing to correct these inconsistencies.  Users who
 depend on some of the the "broken" behavior of DateField in Solr 1.2
@@ -10628,7 +10628,7 @@ Optimizations
  6. SOLR-342:  Added support into the SolrIndexWriter for using several new features of the new
     LuceneIndexWriter, including: setRAMBufferSizeMB(), setMergePolicy(), setMergeScheduler.  
     Also, added support to specify Lucene's autoCommit functionality (not to be confused with Solr's
-    similarily named autoCommit functionality) via the <luceneAutoCommit> config. item.  See the test 
+    similarly named autoCommit functionality) via the <luceneAutoCommit> config. item.  See the test 
     and example solrconfig.xml <indexDefaults> section for usage.  Performance during indexing should 
     be significantly increased by moving up to 2.3 due to Lucene's new indexing capabilities.  
     Furthermore, the setRAMBufferSizeMB makes it more logical to decide on tuning factors related to
@@ -10747,7 +10747,7 @@ Bug Fixes
 31. SOLR-514: Added explicit media-type with UTF* charset to *.xsl files that
     don't already have one. (hossman) 
 
-32. SOLR-505: Give RequestHandlers the possiblity to suppress the generation
+32. SOLR-505: Give RequestHandlers the possibility to suppress the generation
     of HTTP caching headers.  (Thomas Peuss via Otis Gospodnetic)
 
 33. SOLR-553: Handle highlighting of phrase terms better when
@@ -10973,7 +10973,7 @@ New Features
  2. SOLR-89: Two new TokenFilters with corresponding Factories...
     * TrimFilter - Trims leading and trailing whitespace from Tokens
     * PatternReplaceFilter - applies a Pattern to each token in the
-      stream, replacing match occurances with a specified replacement.
+      stream, replacing match occurrences with a specified replacement.
     (hossman)
 
  3. SOLR-91: allow configuration of a limit of the number of searchers 
@@ -11171,7 +11171,7 @@ Changes in runtime behavior
     ContentStream.getReader() will use UTF-8 encoding.  (ryan)
 
 11. SOLR-230: More options for post.jar to support stdin, xml on the
-    commandline, and defering commits.  Tutorial modified to take
+    commandline, and deferring commits.  Tutorial modified to take
     advantage of these options so there is no need for curl.
     (hossman)
 
@@ -11380,9 +11380,9 @@ Changes in runtime behavior
     (Andrew May via klaas, SOLR-37)
  5. Default param values for DisMaxRequestHandler should now be specified
     using a '<lst name="defaults">...</lst>' init param, for backwards
-    compatability all init prams will be used as defaults if an init param
+    compatibility all init prams will be used as defaults if an init param
     with that name does not exist. (hossman, SOLR-43)
- 6. The DisMaxRequestHandler now supports multiple occurances of the "fq"
+ 6. The DisMaxRequestHandler now supports multiple occurrences of the "fq"
     param. (hossman, SOLR-44)
  7. FunctionQuery.explain now uses ComplexExplanation to provide more
     accurate score explanations when composed in a BooleanQuery.
@@ -11457,7 +11457,7 @@ Other Changes
 13. Added Solr/Lucene versions to "Info" page (hossman)
 14. Explicitly set mime-type of .xsl files in web.xml to
     application/xslt+xml (hossman)
-15. Config parsing should now work useing DOM Level 2 parsers -- Solr
+15. Config parsing should now work using DOM Level 2 parsers -- Solr
     previously relied on getTextContent which is a DOM Level 3 addition
     (Alexander Saar via hossman, SOLR-78)
 

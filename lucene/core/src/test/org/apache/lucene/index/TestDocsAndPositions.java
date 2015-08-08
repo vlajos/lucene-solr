@@ -168,7 +168,7 @@ public class TestDocsAndPositions extends LuceneTestCase {
           Integer[] pos = positionsInDoc[leafReaderContext.docBase + docID];
           assertEquals(pos.length, docsAndPosEnum.freq());
           // number of positions read should be random - don't read all of them
-          // allways
+          // always
           final int howMany = random().nextInt(20) == 0 ? pos.length
               - random().nextInt(pos.length) : pos.length;
           for (int j = 0; j < howMany; j++) {

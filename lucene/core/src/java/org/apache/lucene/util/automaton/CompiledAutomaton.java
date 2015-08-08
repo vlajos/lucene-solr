@@ -269,7 +269,7 @@ public class CompiledAutomaton {
       if (transition.min < leadLabel) {
         maxIndex = i;
       } else {
-        // Transitions are alway sorted
+        // Transitions are always sorted
         break;
       }
     }

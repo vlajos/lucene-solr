@@ -124,7 +124,7 @@ public class DistributedFacetPivotLargeTest extends BaseDistributedSearchTestCas
     // sort=index + offset + limit w/ some variables
     for (SolrParams variableParams : 
            new SolrParams[] { // bother variations should kwrk just as well
-             // defauts
+             // defaults
              params(),
              // force refinement
              params(FacetParams.FACET_OVERREQUEST_RATIO, "1", 
@@ -181,7 +181,7 @@ public class DistributedFacetPivotLargeTest extends BaseDistributedSearchTestCas
     //   ... but there's no refinement since mincount==0
     // - would it even matter
     //
-    // should we remove the refinement short circut?
+    // should we remove the refinement short circuit?
     //
     // rsp = query( params( "q", "*:*",
     //                      "rows", "0",
@@ -260,7 +260,7 @@ public class DistributedFacetPivotLargeTest extends BaseDistributedSearchTestCas
       }
     }
 
-    // Pivot Faceting (combined wtih Field Faceting)
+    // Pivot Faceting (combined with Field Faceting)
     for (SolrParams facetParams : 
            // with and w/o an excluded fq
            // (either way, facet results should be the same)

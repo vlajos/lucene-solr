@@ -103,7 +103,7 @@ public class TestWordDelimiterFilterFactory extends SolrTestCaseJ4 {
   }
 
   @Test
-  public void testPreserveOrignalTrue() {
+  public void testPreserveOriginalTrue() {
 
     assertU(adoc("id",  "144",
                  "wdf_preserve", "404-123"));

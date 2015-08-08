@@ -564,8 +564,8 @@ public class TestReplicationHandler extends SolrTestCaseJ4 {
     //get docs from master and check if number is equal to master
     assertEquals(nDocs+1, numFound(rQuery(nDocs+1, "*:*", masterClient)));
     
-    // NOTE: this test is wierd, we want to verify it DOESNT replicate...
-    // for now, add a sleep for this.., but the logic is wierd.
+    // NOTE: this test is weird, we want to verify it DOESNT replicate...
+    // for now, add a sleep for this.., but the logic is weird.
     Thread.sleep(3000);
     
     //get docs from slave and check if number is not equal to master; polling is disabled

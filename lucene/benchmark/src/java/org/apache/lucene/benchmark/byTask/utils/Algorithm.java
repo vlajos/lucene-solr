@@ -110,7 +110,7 @@ public class Algorithm implements AutoCloseable {
                     break;
                   }
                   case StreamTokenizer.TT_EOF: {
-                    throw new RuntimeException("Unexpexted EOF: - "+stok.toString());
+                    throw new RuntimeException("Unexpected EOF: - "+stok.toString());
                   }
                   case '"':
                   case '\'': {
@@ -157,7 +157,7 @@ public class Algorithm implements AutoCloseable {
           switch(c) {
           
             case ':' :
-              if (!colonOk) throw new Exception("colon unexpexted: - "+stok.toString());
+              if (!colonOk) throw new Exception("colon unexpected: - "+stok.toString());
               colonOk = false;
               // get repetitions number
               stok.nextToken();

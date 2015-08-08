@@ -127,7 +127,7 @@ public class QueryBuilder {
       throw new IllegalArgumentException("fraction should be >= 0 and <= 1");
     }
     
-    // TODO: wierd that BQ equals/rewrite/scorer doesn't handle this?
+    // TODO: weird that BQ equals/rewrite/scorer doesn't handle this?
     if (fraction == 1) {
       return createBooleanQuery(field, queryText, BooleanClause.Occur.MUST);
     }

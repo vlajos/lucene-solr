@@ -560,7 +560,7 @@ public class TestDistributedSearch extends BaseDistributedSearchTestCase {
                    Stat.mean.getDistribDeps().contains(dep));
       }
 
-      // check our shard requests & responses - ensure we didn't get unneccessary stats from every shard
+      // check our shard requests & responses - ensure we didn't get unnecessary stats from every shard
       int numStatsShardRequests = 0;
       EnumSet<Stat> shardStatsExpected = EnumSet.of(Stat.min, Stat.sum, Stat.count);
       for (List<ShardRequestAndParams> shard : trackingQueue.getAllRequests().values()) {

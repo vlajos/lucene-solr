@@ -605,7 +605,7 @@ public class SolrZkClient implements Closeable {
         string.append(dent + "DATA:\n" + dent + "    "
             + dataString.replaceAll("\n", "\n" + dent + "    ") + NEWL);
       } else {
-        string.append(dent + "DATA: ...supressed..." + NEWL);
+        string.append(dent + "DATA: ...suppressed..." + NEWL);
       }
     }
 

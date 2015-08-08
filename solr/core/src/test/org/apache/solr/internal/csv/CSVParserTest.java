@@ -402,7 +402,7 @@ public class CSVParserTest extends TestCase {
         { "one", "t\\,wo" },  // backslash in quotes only escapes a delimiter (",")
         { "one", "two", "th,ree" },
         { "a\\\\" },     // backslash in quotes only escapes a delimiter (",")
-        { "a\\", "b" },  // a backslash must be returnd 
+        { "a\\", "b" },  // a backslash must be returned 
         { "a\\\\,b" }    // backslash in quotes only escapes a delimiter (",")
       };
     CSVParser parser = new CSVParser(new StringReader(code));

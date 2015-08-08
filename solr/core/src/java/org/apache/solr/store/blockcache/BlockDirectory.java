@@ -123,7 +123,7 @@ public class BlockDirectory extends FilterDirectory {
     return source;
   }
   
-  private boolean isCachableFile(String name) {
+  private boolean isCacheableFile(String name) {
     for (String ext : blockCacheFileTypes) {
       if (name.endsWith(ext)) {
         return true;
@@ -280,7 +280,7 @@ public class BlockDirectory extends FilterDirectory {
     if (!blockCacheReadEnabled) {
       return false;
     }
-    if (blockCacheFileTypes != null && !isCachableFile(name)) {
+    if (blockCacheFileTypes != null && !isCacheableFile(name)) {
       return false;
     }
     switch (context.context) {
@@ -300,7 +300,7 @@ public class BlockDirectory extends FilterDirectory {
       // the cache does support renaming (renameCacheFile), but thats a scary optimization.
       return false;
     }
-    if (blockCacheFileTypes != null && !isCachableFile(name)) {
+    if (blockCacheFileTypes != null && !isCacheableFile(name)) {
       return false;
     }
     switch (context.context) {

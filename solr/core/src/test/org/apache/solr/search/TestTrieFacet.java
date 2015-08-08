@@ -58,7 +58,7 @@ public class TestTrieFacet extends SolrTestCaseJ4 {
 
     // don't break the test
     assertTrue("min value must be less then max value", MIN_VALUE < MAX_VALUE);
-    assertTrue("min value must be greater then zero", 0 < MIN_VALUE);
+    assertTrue("min value must be greater than zero", 0 < MIN_VALUE);
     
     // sanity check no one breaks the schema out from under us...
     for (String f : M_VALUED) {

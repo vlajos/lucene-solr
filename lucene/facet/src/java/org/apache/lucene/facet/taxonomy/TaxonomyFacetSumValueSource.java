@@ -40,7 +40,7 @@ import org.apache.lucene.util.IntsRef;
 public class TaxonomyFacetSumValueSource extends FloatTaxonomyFacets {
   private final OrdinalsReader ordinalsReader;
 
-  /** Aggreggates float facet values from the provided
+  /** Aggregates float facet values from the provided
    *  {@link ValueSource}, pulling ordinals using {@link
    *  DocValuesOrdinalsReader} against the default indexed
    *  facet field {@link
@@ -50,7 +50,7 @@ public class TaxonomyFacetSumValueSource extends FloatTaxonomyFacets {
     this(new DocValuesOrdinalsReader(FacetsConfig.DEFAULT_INDEX_FIELD_NAME), taxoReader, config, fc, valueSource);
   }
 
-  /** Aggreggates float facet values from the provided
+  /** Aggregates float facet values from the provided
    *  {@link ValueSource}, and pulls ordinals from the
    *  provided {@link OrdinalsReader}. */
   public TaxonomyFacetSumValueSource(OrdinalsReader ordinalsReader, TaxonomyReader taxoReader,

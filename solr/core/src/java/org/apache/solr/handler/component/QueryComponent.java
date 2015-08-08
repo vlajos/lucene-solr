@@ -884,7 +884,7 @@ public class QueryComponent extends SearchComponent
     // Alternate Idea: instead of specifying all these things at the upper level,
     // we could just specify that this is a shard request.
     if(rb.shards_rows > -1) {
-      // if the client set shards.rows set this explicity
+      // if the client set shards.rows set this explicitly
       sreq.params.set(CommonParams.ROWS,rb.shards_rows);
     } else {
       sreq.params.set(CommonParams.ROWS, rb.getSortSpec().getOffset() + rb.getSortSpec().getCount());

@@ -292,7 +292,7 @@ public class TestReRankQParserPlugin extends SolrTestCaseJ4 {
 
 
 
-    //Pass in reRankDocs lower then the length being collected.
+    //Pass in reRankDocs lower than the length being collected.
     params = new ModifiableSolrParams();
     params.add("rq", "{!rerank reRankQuery=$rqq reRankDocs=1 reRankWeight=2}");
     params.add("q", "{!edismax bq=$bqq1}*:*");

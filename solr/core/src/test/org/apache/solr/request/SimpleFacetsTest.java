@@ -1382,7 +1382,7 @@ public class SimpleFacetsTest extends SolrTestCaseJ4 {
 
     // NOTE: the counts should all be zero, what we really care about
     // is that the computed lower bounds take into account DST change
-    assertQ("checking facet counts arround DST change for TZ: " + TZ,
+    assertQ("checking facet counts around DST change for TZ: " + TZ,
             req( "q", "*:*"
                 ,"rows", "0"
                 ,"facet", "true"

@@ -133,7 +133,7 @@ public class ConcurrentLFUCache<K, V> implements Cache<K,V> {
     // the size is back to an acceptable level.
     //
     // There is a race between the check and the call to markAndSweep, but
-    // it's unimportant because markAndSweep actually aquires the lock or returns if it can't.
+    // it's unimportant because markAndSweep actually acquires the lock or returns if it can't.
     //
     // Thread safety note: isCleaning read is piggybacked (comes after) other volatile reads
     // in this method.

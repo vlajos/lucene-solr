@@ -124,7 +124,7 @@ public class KerberosTestUtil {
   }
 
   /**
-   *  These Locales don't generate dates that are compatibile with Hadoop MiniKdc.
+   *  These Locales don't generate dates that are compatible with Hadoop MiniKdc.
    */
   private final static List<String> brokenLanguagesWithMiniKdc =
       Arrays.asList(

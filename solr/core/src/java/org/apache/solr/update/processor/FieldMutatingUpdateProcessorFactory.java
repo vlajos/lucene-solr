@@ -46,7 +46,7 @@ import org.apache.solr.util.plugin.SolrCoreAware;
  *   <li><code>fieldName</code> - selecting specific fields by field name lookup</li>
  *   <li><code>fieldRegex</code> - selecting specific fields by field name regex match (regexes are checked in the order specified)</li>
  *   <li><code>typeName</code> - selecting specific fields by fieldType name lookup</li>
- *   <li><code>typeClass</code> - selecting specific fields by fieldType class lookup, including inheritence and interfaces</li>
+ *   <li><code>typeClass</code> - selecting specific fields by fieldType class lookup, including inheritance and interfaces</li>
  * </ul>
  *
  * <p>

@@ -1020,7 +1020,7 @@ public class ConvertedLegacyTest extends SolrTestCaseJ4 {
             ,"*[count(//doc)=1]"
             );
 
-    // this one fails without slop since Sony and KDFE have a token inbetween
+    // this one fails without slop since Sony and KDFE have a token between
 
     // id:42 AND subword:SonyKDFE50A10  %*[count(//doc)=1]
 

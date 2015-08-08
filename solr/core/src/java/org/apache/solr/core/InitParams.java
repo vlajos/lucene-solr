@@ -104,7 +104,7 @@ public class InitParams {
     if (pluginInfo.initArgs != null) {
       for (int i = 0; i < pluginInfo.initArgs.size(); i++) {
         String name = pluginInfo.initArgs.getName(i);
-        if (KNOWN_KEYS.contains(name)) continue;//aready taken care of
+        if (KNOWN_KEYS.contains(name)) continue;//already taken care of
         Object val = info.initArgs.get(name);
         if (val != null) continue; //this is explicitly specified in the reqhandler , ignore
         info.initArgs.add(name, pluginInfo.initArgs.getVal(i));

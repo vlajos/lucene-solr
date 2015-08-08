@@ -1237,7 +1237,7 @@ public class IndexSchema {
    * </p>
    *
    * @param fieldName may be an explicitly created field, or a name that
-   *  excercises a dynamic field.
+   *  exercises a dynamic field.
    * @throws SolrException if no such field exists
    * @see #getField(String)
    * @see #getFieldTypeNoEx

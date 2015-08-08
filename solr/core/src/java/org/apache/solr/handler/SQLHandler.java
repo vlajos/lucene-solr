@@ -155,7 +155,7 @@ public class SQLHandler extends RequestHandlerBase implements SolrCoreAware {
     Bucket[] buckets = getBuckets(sqlVisitor.groupBy, fieldSet);
     Metric[] metrics = getMetrics(sqlVisitor.fields, fieldSet);
     if(metrics.length == 0) {
-      throw new IOException("Group by queries must include atleast one aggregate function.");
+      throw new IOException("Group by queries must include at least one aggregate function.");
     }
 
     String fl = fields(fieldSet);

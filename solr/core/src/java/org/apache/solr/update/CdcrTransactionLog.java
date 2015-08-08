@@ -84,7 +84,7 @@ public class CdcrTransactionLog extends TransactionLog {
     try {
       if (endsWithCommit()) {
         long size = fos.size();
-        // 4 bytes for the record size, the lenght of the end message + 1 byte for its value tag,
+        // 4 bytes for the record size, the length of the end message + 1 byte for its value tag,
         // and 4 bytes for the number of records
         long pos = size - 4 - END_MESSAGE.length() - 1 - 4;
         if (pos < 0) return 0;

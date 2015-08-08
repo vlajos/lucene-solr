@@ -126,7 +126,7 @@ public class LineFileDocs implements Closeable {
       is.skip(seekTo);
     }
     
-    // if we seeked somewhere, read until newline char
+    // if we sought somewhere, read until newline char
     if (seekTo > 0L) {
       int b;
       do {

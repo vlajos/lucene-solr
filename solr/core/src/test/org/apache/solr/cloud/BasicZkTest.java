@@ -30,7 +30,7 @@ import org.junit.Test;
 
 /**
  * This test is not fully functional - the port registered is illegal - 
- * so you cannot hit this with http - a nice side benifit is that it will
+ * so you cannot hit this with http - a nice side benefit is that it will
  * detect if a node is trying to do an update to itself with http - it shouldn't
  * do that.
  */

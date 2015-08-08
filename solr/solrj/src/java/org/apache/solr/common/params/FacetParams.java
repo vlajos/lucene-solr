@@ -399,7 +399,7 @@ public interface FacetParams {
      * correct semantics and applying the default of "LOWER"
      */
     public static EnumSet<FacetRangeInclude> parseParam(final String[] param) {
-      // short circut for default behavior
+      // short circuit for default behavior
       if (null == param || 0 == param.length ) 
         return EnumSet.of(LOWER);
 

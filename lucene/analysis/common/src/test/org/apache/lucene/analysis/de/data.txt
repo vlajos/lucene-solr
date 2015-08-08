@@ -39,7 +39,7 @@ xxxxxnd	xxxxx
 # the suffixes are also removed when combined:
 xxxxxetende	xxxxx
 
-# words that are shorter than four charcters are not changed:
+# words that are shorter than four characters are not changed:
 xxe	xxe
 # -em and -er are not removed from words shorter than five characters:
 xxem	xxem

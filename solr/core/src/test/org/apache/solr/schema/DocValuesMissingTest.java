@@ -360,7 +360,7 @@ public class DocValuesMissingTest extends SolrTestCaseJ4 {
   public void testStringSort() throws Exception {
 
     // note: cant use checkSortMissingDefault because 
-    // nothing sorts lower then the default of ""
+    // nothing sorts lower than the default of ""
     for (String field : new String[] {"stringdv","dyn_stringdv"}) {
       assertU(adoc("id", "0")); // missing
       assertU(adoc("id", "1", field, "a"));

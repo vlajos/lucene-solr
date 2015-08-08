@@ -115,7 +115,7 @@ public class PostingsSolrHighlighter extends SolrHighlighter implements PluginIn
   public NamedList<Object> doHighlighting(DocList docs, Query query, SolrQueryRequest req, String[] defaultFields) throws IOException {
     final SolrParams params = req.getParams(); 
     
-    // if highlighting isnt enabled, then why call doHighlighting?
+    // if highlighting isn't enabled, then why call doHighlighting?
     if (!isHighlightingEnabled(params))
       return null;
 

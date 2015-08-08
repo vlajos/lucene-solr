@@ -814,7 +814,7 @@ public class Grouping {
         groupList.add(nl);                         // grouped={ key={ groups=[ {
 
 
-        // To keep the response format compatable with trunk.
+        // To keep the response format compatible with trunk.
         // In trunk MutableValue can convert an indexed value to its native type. E.g. string to int
         // The only option I currently see is the use the FieldType for this
         if (group.groupValue != null) {

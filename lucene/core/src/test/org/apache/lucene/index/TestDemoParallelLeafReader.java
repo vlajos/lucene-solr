@@ -556,7 +556,7 @@ public class TestDemoParallelLeafReader extends LuceneTestCase {
             }
           }
 
-          // If any error occured, throw it.
+          // If any error occurred, throw it.
           IOUtils.reThrow(th);
         }
     

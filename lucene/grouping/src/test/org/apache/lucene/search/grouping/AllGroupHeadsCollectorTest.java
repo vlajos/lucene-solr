@@ -119,14 +119,14 @@ public class AllGroupHeadsCollectorTest extends LuceneTestCase {
 
     // 6 -- no author field
     doc = new Document();
-    doc.add(newTextField("content", "random word stuck in alot of other text", Field.Store.NO));
+    doc.add(newTextField("content", "random word stuck in a lot of other text", Field.Store.NO));
     doc.add(new NumericDocValuesField("id_1", 6));
     doc.add(new SortedDocValuesField("id_2", new BytesRef("6")));
     w.addDocument(doc);
 
     // 7 -- no author field
     doc = new Document();
-    doc.add(newTextField("content", "random word stuck in alot of other text", Field.Store.NO));
+    doc.add(newTextField("content", "random word stuck in a lot of other text", Field.Store.NO));
     doc.add(new NumericDocValuesField("id_1", 7));
     doc.add(new SortedDocValuesField("id_2", new BytesRef("7")));
     w.addDocument(doc);

@@ -72,9 +72,9 @@ import static org.apache.solr.update.processor.DistributingUpdateProcessorFactor
  *   <li><code>deleteVersionParam</code> - This string parameter controls whether this 
  *     processor will intercept and inspect Delete By Id commands in addition to adding 
  *     documents.  If specified, then the value will specify the name of a request 
- *     paramater which becomes  mandatory for all Delete By Id commands.  This param 
+ *     parameter which becomes  mandatory for all Delete By Id commands.  This param 
  *     must then be used to specify the document version associated with the delete.
- *     If the version specified using this param is not greater then the value in the 
+ *     If the version specified using this param is not greater than the value in the 
  *     <code>versionField</code> for any existing document, then the delete will fail 
  *     with a 409 Version Conflict error.  When using this param, Any Delete By Id 
  *     command with a high enough document version number to succeed will be internally 
@@ -468,7 +468,7 @@ public class DocBasedVersionConstraintsProcessorFactory extends UpdateRequestPro
         //   - deleteVersionParam to do a version check
         //   - some new boolean param to determine if a stub document gets added in place?
         try {
-          // drop the delete, and instead propogate an AddDoc that
+          // drop the delete, and instead propagate an AddDoc that
           // replaces the doc with a new "empty" one that records the deleted version
 
           SolrInputDocument newDoc = new SolrInputDocument();

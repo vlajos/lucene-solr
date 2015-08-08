@@ -250,7 +250,7 @@ public class TestTermRangeQuery extends LuceneTestCase {
     writer.close();
   }
 
-  // shouldnt create an analyzer for every doc?
+  // should not create an analyzer for every doc?
   private void addDoc(String content) throws IOException {
     IndexWriter writer = new IndexWriter(dir, newIndexWriterConfig(new MockAnalyzer(random(), MockTokenizer.WHITESPACE, false)).setOpenMode(OpenMode.APPEND));
     insertDoc(writer, content);

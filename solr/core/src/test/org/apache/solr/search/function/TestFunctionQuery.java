@@ -553,7 +553,7 @@ public class TestFunctionQuery extends SolrTestCaseJ4 {
     assertQ(req("fl", "*,score", "q", "{!func}strdist(x_s, 'foit', ngram, 2)", "fq", "id:1"), "//float[@name='score']='0.875'");
 
     // strdist on a missing valuesource should itself by missing, so the ValueSourceAugmenter 
-    // should supress it...
+    // should suppress it...
     assertQ(req("q", "id:1",
                 "fl", "good:strdist(x_s, 'toil', edit)", 
                 "fl", "bad1:strdist(missing1_s, missing2_s, edit)", 

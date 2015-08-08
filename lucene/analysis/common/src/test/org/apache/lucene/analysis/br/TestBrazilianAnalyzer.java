@@ -41,7 +41,7 @@ public class TestBrazilianAnalyzer extends BaseTokenStreamTestCase {
    check("boa", "boa");
    check("boainain", "boainain");
    check("boas", "boas");
-   check("bôas", "boas"); // removes diacritic: different from snowball portugese
+   check("bôas", "boas"); // removes diacritic: different from snowball portuguese
    check("boassu", "boassu");
    check("boataria", "boat");
    check("boate", "boat");
@@ -51,7 +51,7 @@ public class TestBrazilianAnalyzer extends BaseTokenStreamTestCase {
    check("boba", "bob");
    check("bobagem", "bobag");
    check("bobagens", "bobagens");
-   check("bobalhões", "bobalho"); // removes diacritic: different from snowball portugese
+   check("bobalhões", "bobalho"); // removes diacritic: different from snowball portuguese
    check("bobear", "bob");
    check("bobeira", "bobeir");
    check("bobinho", "bobinh");
@@ -134,7 +134,7 @@ public class TestBrazilianAnalyzer extends BaseTokenStreamTestCase {
     checkReuse(a, "boa", "boa");
     checkReuse(a, "boainain", "boainain");
     checkReuse(a, "boas", "boas");
-    checkReuse(a, "bôas", "boas"); // removes diacritic: different from snowball portugese
+    checkReuse(a, "bôas", "boas"); // removes diacritic: different from snowball portuguese
     a.close();
   }
  

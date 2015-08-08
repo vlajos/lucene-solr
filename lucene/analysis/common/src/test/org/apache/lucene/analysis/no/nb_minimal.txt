@@ -1,6 +1,6 @@
 #
 # Tests for norwegian Bokmål minimal stemmer
-# It only tries to stem nouns, i.e. being very little agressive
+# It only tries to stem nouns, i.e. being very little aggressive
 #
 # Nouns masculine
 bil	bil
